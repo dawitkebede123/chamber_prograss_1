@@ -1,58 +1,115 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart'; // Import for SVG support
+import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/pages/user/Almanac.dart';
+import 'package:chamber_of_commerce/pages/user/Business.dart';
+import 'package:chamber_of_commerce/pages/user/Favorite.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-// class BottomNavBar extends StatefulWidget {
-//   const BottomNavBar({super.key});
+class BottomNav extends StatelessWidget {
+  const BottomNav({super.key});
 
-//   @override
-//   State<BottomNavBar> createState() => _BottomNavBarState();
-// }
-
-// class _BottomNavBarState extends State<BottomNavBar> {
-//   int _selectedIndex = 0; // Track selected item index (optional, for programmatic selection)
-
-//   void _onItemTapped(int index) {
-//     setState(() {
-//       _selectedIndex = index;
-//     });
-//     // Add navigation logic here based on the selected index
-//     // (e.g., Navigator.push for page navigation)
-//   }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return BottomNavigationBar(
-//       items: const <BottomNavigationBarItem>[
-//         BottomNavigationBarItem(
-//           backgroundColor: Color.fromARGB(255, 0, 114, 63),
-//           // ignore: deprecated_member_use
-//           icon:  Icon(SvgPicture.asset('assets/images/home.svg',width: 40,height: 20,)), // Use SVG for icon
-//           label: 'Home',
-//         ),
-//         BottomNavigationBarItem(
-//           icon: ImageIcon(SvgPicture.asset('assets/images/discovery.svg')) ,
-//           label: 'Discovery',
-//           backgroundColor: Color.fromARGB(255, 10, 131, 53),
-//         ),
-//         BottomNavigationBarItem(
-//           icon: SvgPicture.asset('assets/images/business_small.svg'),
-//           label: 'Business',
-//           backgroundColor: Color.fromARGB(255, 10, 131, 53),
-//         ),
-//         BottomNavigationBarItem(
-//           icon: SvgPicture.asset('assets/images/almanac_small.svg'),
-//           label: 'Almanac',
-//           backgroundColor: Color.fromARGB(255, 10, 131, 53),
-//         ),
-//         BottomNavigationBarItem(
-//           icon: SvgPicture.asset('assets/images/favorite.svg'),
-//           label: 'Favorite',
-//           backgroundColor: Color.fromARGB(255, 10, 131, 53),
-//         ),
-//       ],
-//       currentIndex: _selectedIndex, // Set current index (optional)
-//       selectedItemColor: Colors.amber[800],
-//       onTap: _onItemTapped,
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+         bottomNavigationBar: BottomNavigationBar(
+     items:  <BottomNavigationBarItem>[
+       BottomNavigationBarItem(
+       backgroundColor: Color.fromARGB(255, 0, 114, 63),
+        //you have to use svg
+         icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Home()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/home.png'),   
+          ),
+         ),
+         label: 'Home',
+       ),
+       BottomNavigationBarItem(
+        //  icon: Image(image: AssetImage('assets/images/discovery.png')),
+         icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Home()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/discovery.png'),   
+          ),
+         ),
+         label: 'Discovery',
+       backgroundColor: Color.fromARGB(255, 10, 131, 53),
+     
+       ),
+       BottomNavigationBarItem(
+          // icon: Image(image: AssetImage('assets/images/business_small.png')),
+           icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Business()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/business_small.png'),   
+          ),
+         ),
+           
+         label: 'Business',
+      backgroundColor: Color.fromARGB(255, 10, 131, 53),
+         
+       ),
+        BottomNavigationBarItem(
+        //  icon: Image(image: AssetImage('assets/images/almanac_small.png')),
+         icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Almanac()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/almanac_small.png'),   
+          ),
+         ),
+         label: 'Almanac',
+      backgroundColor: Color.fromARGB(255, 10, 131, 53),
+     
+       ),
+        BottomNavigationBarItem(
+     
+        //  icon: Image(image: AssetImage('assets/images/favorite.png')),
+         icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Favorite()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/favorite.png'),   
+          ),
+         ),
+         label: 'Favorite',
+          // backgroundColor: Color(0X00723F),
+       backgroundColor: Color.fromARGB(255, 10, 131, 53),
+       
+       ),
+     ],
+     // currentIndex: _selectedIndex,
+      selectedItemColor: Colors.amber[800],
+     // 
+    //  onTap: _onItemTapped,
+           )
+    );  }
+}
