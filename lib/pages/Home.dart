@@ -1,5 +1,9 @@
 
+import 'package:chamber_of_commerce/pages/user/Almanac.dart';
+import 'package:chamber_of_commerce/pages/user/Business.dart';
 import 'package:chamber_of_commerce/pages/user/Category.dart';
+import 'package:chamber_of_commerce/pages/user/Discovery.dart';
+import 'package:chamber_of_commerce/pages/user/Favorite.dart';
 import 'package:chamber_of_commerce/widgets/SearchMoreIcon.dart';
 import 'package:chamber_of_commerce/widgets/drawer.dart';
 import 'package:chamber_of_commerce/widgets/verticalAlign.dart';
@@ -158,36 +162,94 @@ const SizedBox(width: 20.0),
       
 
      bottomNavigationBar: BottomNavigationBar(
-     items: const <BottomNavigationBarItem>[
+     items:  <BottomNavigationBarItem>[
        BottomNavigationBarItem(
        backgroundColor: Color.fromARGB(255, 0, 114, 63),
         //you have to use svg
-         icon: Image(image: AssetImage('assets/images/home.png'),   
+         icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Home()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/home.png'),   
+          ),
          ),
          label: 'Home',
        ),
        BottomNavigationBarItem(
-         icon: Image(image: AssetImage('assets/images/discovery.png')),
+        //  icon: Image(image: AssetImage('assets/images/discovery.png')),
+         icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Discovery()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/discovery.png'),   
+          ),
+         ),
          label: 'Discovery',
        backgroundColor: Color.fromARGB(255, 10, 131, 53),
      
        ),
        BottomNavigationBarItem(
-          icon: Image(image: AssetImage('assets/images/business_small.png')),
+          // icon: Image(image: AssetImage('assets/images/business_small.png')),
+           icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Business()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/business_small.png'),   
+          ),
+         ),
            
          label: 'Business',
       backgroundColor: Color.fromARGB(255, 10, 131, 53),
          
        ),
         BottomNavigationBarItem(
-         icon: Image(image: AssetImage('assets/images/almanac_small.png')),
+        //  icon: Image(image: AssetImage('assets/images/almanac_small.png')),
+         icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Almanac()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/almanac_small.png'),   
+          ),
+         ),
          label: 'Almanac',
       backgroundColor: Color.fromARGB(255, 10, 131, 53),
      
        ),
         BottomNavigationBarItem(
      
-         icon: Image(image: AssetImage('assets/images/favorite.png')),
+        //  icon: Image(image: AssetImage('assets/images/favorite.png')),
+         icon: TextButton(
+          onPressed:  () { 
+                Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Favorite()),
+            );
+          },
+         
+         
+           child: Image(image: AssetImage('assets/images/favorite.png'),   
+          ),
+         ),
          label: 'Favorite',
           // backgroundColor: Color(0X00723F),
        backgroundColor: Color.fromARGB(255, 10, 131, 53),
