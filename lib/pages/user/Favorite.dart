@@ -72,7 +72,14 @@ class Favorite extends StatelessWidget {
            children: [
             SvgPicture.asset('assets/images/chamber_icon.svg'),
             Text("Awash"),
-            // Icons.abc()
+            actions: [
+          IconButton(
+        icon: const Icon(Icons.notifications),
+        onPressed: () {
+          // Handle notification tap
+        },
+      ),]
+            // IconButton(onPressed: onPressed, icon: Icons.abc)
             // Image()
           //  enter icon here
 
@@ -83,7 +90,7 @@ class Favorite extends StatelessWidget {
            ],
           ),
             
-             GridScreen(items: _items),
+            //  GridScreen(items: _items),
         ],
       ),
         
