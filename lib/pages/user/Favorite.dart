@@ -70,7 +70,7 @@ class Favorite extends StatelessWidget {
         children: [
           Row(
            children: [
-            SvgPicture.asset('assets/images/favorite.svg'),
+            SvgPicture.asset('assets/images/chamber_icon.svg'),
             Text("Awash"),
             // Icons.abc()
             // Image()

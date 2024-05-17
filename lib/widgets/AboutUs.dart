@@ -46,12 +46,8 @@ class About extends StatelessWidget {
         ),
        //should be replace by botton
         actions: [
-          IconButton(
-        icon: const Icon(Icons.notifications),
-        onPressed: () {
-          // Handle notification tap
-        },
-      ),
+          SvgPicture.asset('assets/images/chamber_icon.svg' ),
+         
     ],
         elevation: 0.0,//remove shadow
         centerTitle: true,
