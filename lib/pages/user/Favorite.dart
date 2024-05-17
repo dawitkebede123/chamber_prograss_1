@@ -3,20 +3,17 @@ import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Favorite extends StatelessWidget {
   const Favorite({super.key});
 
   @override
   Widget build(BuildContext context) {
-     final List<String> _items = const [
-    "Card 1",
-    "Card 2",
-    "Card 3",
-    "Card 4",
-    "Card 5",
-    "Card 6",
-   
+     final  _items = [
+     "assets/images/awash.svg",
+     "assets/images/air.svg",
+     "assets/images/dashen.svg"
    
 
   ];
@@ -69,56 +66,37 @@ class Favorite extends StatelessWidget {
       ),
       
       body:
-      //  ListView(
-        // children: [
-             GridScreen(),
-            //  GridSingle()
-        // ],
-      // ),
+       ListView(
+        children: [
+          Row(
+           children: [
+            SvgPicture.asset('assets/images/favorite.svg'),
+            Text("Awash"),
+            // Icons.abc()
+            // Image()
+          //  enter icon here
+
+
+            // Text()
+            //company name here 
+            // trash Icon
+           ],
+          ),
+            
+             GridScreen(items: _items),
+        ],
+      ),
         
-
-
-      
-      // ListView(
-      //   children: [
-
-      //     ////slider for almanac
-      //     Container(
-      //       ///place holder for slider 
-      //       child: const Image(
-      //       image:AssetImage('assets/images/business_Adv.png')
-      //               ),
-      //     ),
-          
-      //    GridView.count(
-      //   crossAxisCount: 3, // Three columns
-      //   childAspectRatio: 1.5, // Aspect ratio for cards (adjust as needed)
-      //   children: _items.map((String item) => _buildCard(item)).toList(),
-      // ),
-       
-     
-      //   ],
-         
-         
-      // ),
  
 
-      // addis chamber contact bar
+      
+    
       
 
-      bottomNavigationBar: BottomNav(),
 
     );
     return scaffold;
   }
- Widget _buildCard(String item) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Text(item),
-        ),
-      ),
-    );
-  }
+
+ 
 }

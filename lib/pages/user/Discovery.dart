@@ -9,13 +9,10 @@ class Discovery extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final List<String> _items = const [
-    "Card 1",
-    "Card 2",
-    "Card 3",
-    "Card 4",
-    "Card 5",
-    "Card 6",
+     final _items =  [
+     "assets/images/awash.svg",
+     "assets/images/air.svg",
+     "assets/images/dashen.svg"
    
    
 
@@ -80,7 +77,7 @@ class Discovery extends StatelessWidget {
       body:
       //  ListView(
         // children: [
-             GridScreen(),
+             GridScreen(items: _items),
             //  GridSingle()
         // ],
       // ),
@@ -115,11 +112,12 @@ class Discovery extends StatelessWidget {
       // addis chamber contact bar
       
 
-      bottomNavigationBar: BottomNav(),
+      bottomNavigationBar:const BottomNav(),
 
     );
     return scaffold;
   }
+
  Widget _buildCard(String item) {
     return Card(
       child: Padding(

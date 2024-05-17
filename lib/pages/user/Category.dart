@@ -8,13 +8,13 @@ class Category extends StatelessWidget {
 
   @override
    Widget build(BuildContext context) {
-     final List<String> _items = const [
-    "Card 1",
-    "Card 2",
-    "Card 3",
-    "Card 4",
-    "Card 5",
-    "Card 6",
+     const _items = [
+    "assets/images/awash.jpg",
+    "assets/images/air.jpg",
+    "assets/images/dashen.jpg",
+    "assets/images/air.jpg",
+    "assets/images/dashen.jpg",
+    "assets/images/awash.jpg",
    
    
 
@@ -70,7 +70,7 @@ class Category extends StatelessWidget {
       body:
       //  ListView(
         // children: [
-            GridScreen(),
+            GridScreen(items: _items),
             //  GridSingle()
         // ],
       // ),
@@ -105,11 +105,12 @@ class Category extends StatelessWidget {
       // addis chamber contact bar
       
 
-      bottomNavigationBar: BottomNav(),
+      bottomNavigationBar:const BottomNav(),
 
     );
     return scaffold;
   }
+
  Widget _buildCard(String item) {
     return Card(
       child: Padding(

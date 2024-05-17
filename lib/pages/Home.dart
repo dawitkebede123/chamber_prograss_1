@@ -4,6 +4,7 @@ import 'package:chamber_of_commerce/pages/user/Business.dart';
 import 'package:chamber_of_commerce/pages/user/Category.dart';
 import 'package:chamber_of_commerce/pages/user/Discovery.dart';
 import 'package:chamber_of_commerce/pages/user/Favorite.dart';
+import 'package:chamber_of_commerce/widgets/AboutUs.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/SearchField.dart';
 import 'package:chamber_of_commerce/widgets/SearchMoreIcon.dart';
@@ -20,23 +21,30 @@ import 'package:flutter_svg/flutter_svg.dart';
 //   runApp(const MyApp());
 // }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
+  @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     // final AssetImage backgroundImage = AssetImage('assets/images/logo.jpg');
    
     var scaffold = Scaffold(
         drawer: Drawer(
+        width: MediaQuery.of(context).size.width * 0.80,
          backgroundColor: Colors.white,
-          child: ListView(
-           padding: EdgeInsets.zero, // Remove default padding
-           children: [
-          // Add any drawer header content here (optional)
-             const TwoButtonWidget(), // Use the widget directly
-        ],
-      ),
+         child: About(),
+      //     child: ListView(
+      //      padding: EdgeInsets.zero, // Remove default padding
+      //      children: [
+      //     // Add any drawer header content here (optional)
+      //        const TwoButtonWidget(), // Use the widget directly
+      //   ],
+      // ),
        ),
       
        
@@ -118,7 +126,7 @@ const SizedBox(width: 20.0),
          
       ),
      
-      bottomNavigationBar: BottomNav(),
+      bottomNavigationBar: const BottomNav(),
       
     
     );

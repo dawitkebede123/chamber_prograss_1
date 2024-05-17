@@ -9,13 +9,12 @@ class Almanac extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final List<String> _items = const [
-    "Card 1",
-    "Card 2",
-    "Card 3",
-    "Card 4",
-    "Card 5",
-    "Card 6",
+     const _items = [
+   "assets/images/agriculture.svg",
+     "assets/images/capital_goods.svg",
+     "assets/images/finance.svg",
+     "assets/images/trade.svg"
+
    
    
 
@@ -31,11 +30,11 @@ class Almanac extends StatelessWidget {
         backgroundColor:Colors.white,
 
         leading: IconButton(
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           onPressed:()=>{
            Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Home()),
+              MaterialPageRoute(builder: (context) => const Home()),
             ),
             }
           ),
@@ -66,7 +65,7 @@ class Almanac extends StatelessWidget {
         centerTitle: true,
       ),
     
-      body: GridScreen(),
+      body: const GridScreen(items: _items),
       // ListView(
       //   children: [
 
@@ -93,12 +92,13 @@ class Almanac extends StatelessWidget {
       // addis chamber contact bar
       
 
-      bottomNavigationBar:BottomNav(),
+      bottomNavigationBar:const BottomNav(),
 
 
     );
     return scaffold;
   }
+
  Widget _buildCard(String item) {
     return Card(
       child: Padding(
@@ -109,5 +109,4 @@ class Almanac extends StatelessWidget {
       ),
     );
   }
-  
 }

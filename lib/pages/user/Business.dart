@@ -9,14 +9,12 @@ class Business extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     final List<String> _items = const [
-    "assets/images/awash.jpg",
-    "assets/images/air.jpg",
-    "assets/images/dashen.jpg",
-    "assets/images/air.jpg",
-    "assets/images/dashen.jpg",
-    "assets/images/awash.jpg",
-   
+     final  _items = [
+      "assets/images/agriculture.svg",
+     "assets/images/capital_goods.svg",
+     "assets/images/finance.svg",
+     "assets/images/trade.svg"
+
    
 
   ];
@@ -71,7 +69,7 @@ class Business extends StatelessWidget {
       body:
       //  ListView(
         // children: [
-             GridScreen(),
+             GridScreen(items : _items),
             //  GridSingle()
         // ],
       // ),
@@ -106,11 +104,12 @@ class Business extends StatelessWidget {
       // addis chamber contact bar
       
 
-      bottomNavigationBar: BottomNav(),
+      bottomNavigationBar:const BottomNav(),
 
     );
     return scaffold;
   }
+
  Widget _buildCard(String item) {
     return Card(
       child: Padding(
@@ -124,5 +123,4 @@ class Business extends StatelessWidget {
       ),
     );
   }
-  
 }

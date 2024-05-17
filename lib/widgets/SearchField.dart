@@ -7,9 +7,12 @@ class SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
+                   height:54,
+
             margin:const EdgeInsets.all(10),
             child: TextField(
               decoration: InputDecoration(
+
                 filled: true,
                 fillColor: const Color.fromARGB(255,229,234,232),
                 border: OutlineInputBorder(

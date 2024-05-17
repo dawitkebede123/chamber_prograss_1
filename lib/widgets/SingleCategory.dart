@@ -1,5 +1,6 @@
 import 'package:chamber_of_commerce/pages/Home.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
+// import 'package:chamber_of_commerce/widgets/GridScreenCategory.dart';
 import 'package:chamber_of_commerce/widgets/GridSingle.dart';
 import 'package:flutter/material.dart';
 
@@ -67,10 +68,10 @@ class SingleCategory extends StatelessWidget {
         centerTitle: true,
       ),
       
-      body:
+      body:GridScreen(items: _items,),
       //  ListView(
         // children: [
-             GridScreen(),
+            //  GridScreen(items: _items),
             //  GridSingle()
         // ],
       // ),
