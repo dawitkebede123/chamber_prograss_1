@@ -4,6 +4,8 @@ import 'package:chamber_of_commerce/pages/user/Business.dart';
 import 'package:chamber_of_commerce/pages/user/Category.dart';
 import 'package:chamber_of_commerce/pages/user/Discovery.dart';
 import 'package:chamber_of_commerce/pages/user/Favorite.dart';
+import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
+import 'package:chamber_of_commerce/widgets/SearchField.dart';
 import 'package:chamber_of_commerce/widgets/SearchMoreIcon.dart';
 import 'package:chamber_of_commerce/widgets/drawer.dart';
 import 'package:chamber_of_commerce/widgets/verticalAlign.dart';
@@ -72,53 +74,12 @@ class Home extends StatelessWidget {
           ////slider
           Container(
             ///place holder for slider 
-            child: const Image(
-            image:AssetImage('assets/images/banner.png')
-           // image:SvgPicture.asset('assets/images/chamber-logo.svg').image;
-                    ),
+            child: SvgPicture.asset('assets/images/chamber-logo.svg')
+                  
           ),
 
         //search field
-          Container(
-            margin:const EdgeInsets.all(20),
-            child: TextField(
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: const Color.fromARGB(255,229,234,232),
-                border: OutlineInputBorder(
-                  borderRadius:BorderRadius.circular(50),
-                  borderSide: BorderSide.none
-                  ),
-                  contentPadding: const EdgeInsets.all(15),
-                  hintText: 'search',
-                  suffixIcon: Container(
-                   width: 200,
-                   child: const IntrinsicHeight(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-
-                        Padding(
-                        padding: EdgeInsets.all(8.0),
-                       
-                        child: Icon(Icons.search),
-                        ),
-                         Padding(
-                        padding: EdgeInsets.all(8.0),
-                       
-
-                        child: SearchFieldMoreIcon(),
-                       
-                        ),
-                        
-                      ],
-                    ),
-                   ),
-                   
-                  )
-              ),
-            ),
-          ),
+         SearchField(),
 
           //two big buttons
        Container(
@@ -126,7 +87,7 @@ class Home extends StatelessWidget {
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center, // Center buttons horizontally
             children: [
-             CenteredVerticalList(path:'assets/images/business.png', text1: "Business", text2: "All Businesses"),
+             CenteredVerticalList(path:'assets/images/business_large.svg', text1: "Business", text2: "All Businesses"),
              
               // buildButton(
               //   text: 'Business',
@@ -136,7 +97,7 @@ class Home extends StatelessWidget {
                  
               //    ),
               SizedBox(width: 20.0), // Add spacing between buttons
-              CenteredVerticalList(path:'assets/images/almanac.png', text1: "Almanac", text2: "Financial Business"),
+              CenteredVerticalList(path:'assets/images/almanac_large.svg', text1: "Almanac", text2: "Financial Business"),
               // buildButton(text: 'Almanac',description: "Financial Business", icon: Icons.abc,targetPage:"AlmanacPage"),
               
             ],
@@ -156,112 +117,10 @@ const SizedBox(width: 20.0),
          
          
       ),
- 
-
-      // addis chamber contact bar
+     
+      bottomNavigationBar: BottomNav(),
       
-
-     bottomNavigationBar: BottomNavigationBar(
-     items:  <BottomNavigationBarItem>[
-       BottomNavigationBarItem(
-       backgroundColor: Color.fromARGB(255, 0, 114, 63),
-        //you have to use svg
-         icon: TextButton(
-          onPressed:  () { 
-                Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Home()),
-            );
-          },
-         
-         
-           child: Image(image: AssetImage('assets/images/home.png'),   
-          ),
-         ),
-         label: 'Home',
-       ),
-       BottomNavigationBarItem(
-        //  icon: Image(image: AssetImage('assets/images/discovery.png')),
-         icon: TextButton(
-          onPressed:  () { 
-                Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Discovery()),
-            );
-          },
-         
-         
-           child: Image(image: AssetImage('assets/images/discovery.png'),   
-          ),
-         ),
-         label: 'Discovery',
-       backgroundColor: Color.fromARGB(255, 10, 131, 53),
-     
-       ),
-       BottomNavigationBarItem(
-          // icon: Image(image: AssetImage('assets/images/business_small.png')),
-           icon: TextButton(
-          onPressed:  () { 
-                Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Business()),
-            );
-          },
-         
-         
-           child: Image(image: AssetImage('assets/images/business_small.png'),   
-          ),
-         ),
-           
-         label: 'Business',
-      backgroundColor: Color.fromARGB(255, 10, 131, 53),
-         
-       ),
-        BottomNavigationBarItem(
-        //  icon: Image(image: AssetImage('assets/images/almanac_small.png')),
-         icon: TextButton(
-          onPressed:  () { 
-                Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Almanac()),
-            );
-          },
-         
-         
-           child: Image(image: AssetImage('assets/images/almanac_small.png'),   
-          ),
-         ),
-         label: 'Almanac',
-      backgroundColor: Color.fromARGB(255, 10, 131, 53),
-     
-       ),
-        BottomNavigationBarItem(
-     
-        //  icon: Image(image: AssetImage('assets/images/favorite.png')),
-         icon: TextButton(
-          onPressed:  () { 
-                Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Favorite()),
-            );
-          },
-         
-         
-           child: Image(image: AssetImage('assets/images/favorite.png'),   
-          ),
-         ),
-         label: 'Favorite',
-          // backgroundColor: Color(0X00723F),
-       backgroundColor: Color.fromARGB(255, 10, 131, 53),
-       
-       ),
-     ],
-     // currentIndex: _selectedIndex,
-      selectedItemColor: Colors.amber[800],
-     // 
-    //  onTap: _onItemTapped,
-           )
-
+    
     );
     return scaffold;
   }

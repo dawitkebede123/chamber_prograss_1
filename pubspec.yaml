@@ -82,6 +82,16 @@ flutter:
     - assets/images/x.png
     - assets/images/banner.png
     - assets/images/business_Adv.png
+    - assets/images/awash.jpg
+    - assets/images/air.jpg
+    - assets/images/dashen.jpg
+    - assets/images/business_large.svg
+    - assets/images/almanac_large.svg
+    - assets/images/home.svg
+    - assets/images/discovery.svg
+    - assets/images/business_small.svg
+    - assets/images/almanac_small.svg
+    - assets/images/favorite.svg
 
     # - images/a_dot_ham.jpeg
 

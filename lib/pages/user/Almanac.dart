@@ -1,5 +1,6 @@
 import 'package:chamber_of_commerce/pages/Home.dart';
 import 'package:chamber_of_commerce/pages/admin/adminHome.dart';
+import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,7 @@ class Almanac extends StatelessWidget {
        
 
       appBar: AppBar(
-        backgroundColor:Color.fromARGB(255, 255, 241, 209),
+        backgroundColor:Colors.white,
 
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -45,7 +46,7 @@ class Almanac extends StatelessWidget {
     ),
        
         title:const Text(
-          'Almanac Directory',
+          'Almanac',
           style: TextStyle(
            color: Colors.black,
            fontWeight: FontWeight.bold,
@@ -92,48 +93,7 @@ class Almanac extends StatelessWidget {
       // addis chamber contact bar
       
 
-      bottomNavigationBar: BottomNavigationBar(
-     items: const <BottomNavigationBarItem>[
-       BottomNavigationBarItem(
-       backgroundColor: Color.fromARGB(255, 0, 114, 63),
-        //you have to use svg
-         icon: Image(image: AssetImage('assets/images/home.png'),   
-         ),
-         label: 'Home',
-       ),
-       BottomNavigationBarItem(
-         icon: Image(image: AssetImage('assets/images/discovery.png')),
-         label: 'Discovery',
-       backgroundColor: Color.fromARGB(255, 10, 131, 53),
-     
-       ),
-        BottomNavigationBarItem(
-          icon: Image(image: AssetImage('assets/images/business_small.png')),
-           
-         label: 'Business',
-      backgroundColor: Color.fromARGB(255, 10, 131, 53),
-         
-       ),
-        BottomNavigationBarItem(
-         icon: Image(image: AssetImage('assets/images/almanac_small.png')),
-         label: 'Almanac',
-      backgroundColor: Color.fromARGB(255, 10, 131, 53),
-     
-       ),
-        BottomNavigationBarItem(
-     
-         icon: Image(image: AssetImage('assets/images/favorite.png')),
-         label: 'Favorite',
-          // backgroundColor: Color(0X00723F),
-       backgroundColor: Color.fromARGB(255, 10, 131, 53),
-       
-       ),
-     ],
-     // currentIndex: _selectedIndex,
-      selectedItemColor: Colors.amber[800],
-     // 
-    //  onTap: _onItemTapped,
-           )
+      bottomNavigationBar:BottomNav(),
 
 
     );

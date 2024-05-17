@@ -1,4 +1,5 @@
 import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:chamber_of_commerce/widgets/GridSingle.dart';
 import 'package:flutter/material.dart';
@@ -9,12 +10,12 @@ class Business extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      final List<String> _items = const [
-    "Card 1",
-    "Card 2",
-    "Card 3",
-    "Card 4",
-    "Card 5",
-    "Card 6",
+    "assets/images/awash.jpg",
+    "assets/images/air.jpg",
+    "assets/images/dashen.jpg",
+    "assets/images/air.jpg",
+    "assets/images/dashen.jpg",
+    "assets/images/awash.jpg",
    
    
 
@@ -105,49 +106,7 @@ class Business extends StatelessWidget {
       // addis chamber contact bar
       
 
-      bottomNavigationBar: BottomNavigationBar(
-     items: const <BottomNavigationBarItem>[
-       BottomNavigationBarItem(
-       backgroundColor: Color.fromARGB(255, 0, 114, 63),
-        //you have to use svg
-         icon: Image(image: AssetImage('assets/images/home.png'),   
-         ),
-         label: 'Home',
-       ),
-       BottomNavigationBarItem(
-         icon: Image(image: AssetImage('assets/images/discovery.png')),
-         label: 'Discovery',
-       backgroundColor: Color.fromARGB(255, 10, 131, 53),
-     
-       ),
-       BottomNavigationBarItem(
-          icon: Image(image: AssetImage('assets/images/business_small.png')),
-           
-         label: 'Business',
-      backgroundColor: Color.fromARGB(255, 10, 131, 53),
-         
-       ),
-        BottomNavigationBarItem(
-         icon: Image(image: AssetImage('assets/images/almanac_small.png')),
-         label: 'Almanac',
-      backgroundColor: Color.fromARGB(255, 10, 131, 53),
-     
-       ),
-        BottomNavigationBarItem(
-     
-         icon: Image(image: AssetImage('assets/images/favorite.png')),
-         label: 'Favorite',
-          // backgroundColor: Color(0X00723F),
-       backgroundColor: Color.fromARGB(255, 10, 131, 53),
-       
-       ),
-     ],
-     // currentIndex: _selectedIndex,
-      selectedItemColor: Colors.amber[800],
-     // 
-    //  onTap: _onItemTapped,
-           )
-
+      bottomNavigationBar: BottomNav(),
 
     );
     return scaffold;
@@ -157,7 +116,10 @@ class Business extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(
-          child: Text(item),
+          child: Image(
+            image:AssetImage(item)
+           // image:SvgPicture.asset('assets/images/chamber-logo.svg').image;
+                    ),
         ),
       ),
     );

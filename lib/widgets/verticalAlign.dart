@@ -1,7 +1,7 @@
 import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:chamber_of_commerce/pages/user/Business.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 class CenteredVerticalList extends StatelessWidget {
   final String path;
   final String text1;
@@ -23,7 +23,11 @@ class CenteredVerticalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+        child: ClipRRect(
+           borderRadius: BorderRadius.circular(16.0),
+
       child: Container(
+
         width: 150,
         height: 140,
         color: Color.fromARGB(255, 0, 114, 63), // Example color, adjust as needed
@@ -31,17 +35,19 @@ class CenteredVerticalList extends StatelessWidget {
         // decoration: BoxDecoration(
         //   borderRadius: BorderRadius.circular(10.0), // Adjust corner radius as needed
         // ),
+
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image(image: AssetImage(path)),
+           SvgPicture.asset(path),
             const SizedBox(height: 8.0), // Add spacing
             Text(text1, style: text1Style),
             const SizedBox(height: 4.0), // Add spacing
             Text(text2, style: text2Style),
           ],
         ),
+      )
       ),
   
       onTap: (){

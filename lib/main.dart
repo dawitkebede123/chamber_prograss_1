@@ -7,6 +7,7 @@ import 'package:chamber_of_commerce/pages/admin/adminHome.dart';
 import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:chamber_of_commerce/pages/user/Business.dart';
 import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:chamber_of_commerce/widgets/SearchMoreIcon.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,7 +26,8 @@ main() async {
     // home:Business()
     // home:Almanac()
     // home:GridScreen()
-    home:Home()
+    // home: BottomNav()
+     home:Home()
     // home: SearchFieldMoreIcon(),
     // home:MyHomePage()
 

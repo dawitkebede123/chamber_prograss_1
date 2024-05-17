@@ -13,18 +13,16 @@ class GridScreen extends StatefulWidget {
 
 class _GridScreenState extends State<GridScreen> {
   @override
-  final List<String> _items = [
-    "Bank",
-    "Card 2",
-    "Card 3",
-    "Card 4",
-    "Card 5",
-    "Card 6",
-    "Card 8",
-    "Card 9",
-    "Card 10",
-    "Card 11",
-    "Card 12",
+ final List<String> _items = const [
+    "assets/images/awash.jpg",
+    "assets/images/air.jpg",
+    "assets/images/dashen.jpg",
+    "assets/images/air.jpg",
+    "assets/images/dashen.jpg",
+    "assets/images/awash.jpg",
+   
+   
+
   ];
   // String _list = '';
   // String _changer(){
@@ -44,6 +42,7 @@ class _GridScreenState extends State<GridScreen> {
     return 
     
     Card(
+      color: const Color.fromARGB(255, 255, 255, 255),
       child: GestureDetector(
         onTap: (){
           // Navigator.push(context as BuildContext, MaterialPageRoute(builder: (context)=> const Home()));
@@ -51,9 +50,10 @@ class _GridScreenState extends State<GridScreen> {
         },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Text(item),
-        ),
+        child: Image(
+            image:AssetImage(item)
+           // image:SvgPicture.asset('assets/images/chamber-logo.svg').image;
+                    ),
       ),
     ),
     );
