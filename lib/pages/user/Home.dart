@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor:const Color(0XD6D6D6),
         title:const Text(
-          'Addis Chambers Directory',
+          'Addis Chamber Directory',
           style: TextStyle(
            color: Colors.black,
            fontWeight: FontWeight.bold,

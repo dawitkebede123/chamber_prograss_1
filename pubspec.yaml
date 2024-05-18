@@ -99,6 +99,10 @@ flutter:
     - assets/images/dashen.svg 
     - assets/images/chamber_logo_about_page.svg
     - assets/images/chamber_icon.svg
+    - assets/images/trash.svg
+    - assets/images/awash_logo.svg
+    - assets/images/phone_icon.svg
+    - assets/images/discovery_page_icons/banks.svg
 
     # - images/a_dot_ham.jpeg
 

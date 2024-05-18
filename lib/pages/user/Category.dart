@@ -1,4 +1,4 @@
-import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:flutter/material.dart';

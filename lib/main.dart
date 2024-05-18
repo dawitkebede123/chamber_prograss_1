@@ -6,7 +6,7 @@ import 'package:chamber_of_commerce/firebase_options.dart';
 import 'package:chamber_of_commerce/pages/admin/adminHome.dart';
 import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:chamber_of_commerce/pages/user/Business.dart';
-import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:chamber_of_commerce/widgets/SearchMoreIcon.dart';

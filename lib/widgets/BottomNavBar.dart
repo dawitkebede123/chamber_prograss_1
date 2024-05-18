@@ -1,4 +1,4 @@
-import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:chamber_of_commerce/pages/user/Business.dart';
 import 'package:chamber_of_commerce/pages/user/Discovery.dart';

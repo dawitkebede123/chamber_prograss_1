@@ -2,7 +2,7 @@
 
 
 
-import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';

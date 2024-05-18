@@ -1,8 +1,9 @@
-import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/pages/admin/adminHome.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Almanac extends StatelessWidget {
   const Almanac({super.key});
@@ -65,34 +66,16 @@ class Almanac extends StatelessWidget {
         centerTitle: true,
       ),
     
-      body: const GridScreen(items: _items),
-      // ListView(
-      //   children: [
-
-      //     ////slider for almanac
-      //     Container(
-      //       ///place holder for slider 
-      //       child: const Image(
-      //       image:AssetImage('assets/images/Almanac_Adv.png')
-      //               ),
-      //     ),
-      // //    GridView.count(
-      // //   crossAxisCount: 3, // Three columns
-      // //   childAspectRatio: 1.5, // Aspect ratio for cards (adjust as needed)
-      // //   children: _items.map((String item) => _buildCard(item)).toList(),
-      // // ),
-       
-     
-      //   ],
+      body: Column(
+        children: [
+          SvgPicture.asset('assets/images/adv_medroc.svg'),
+          Expanded(child:  GridScreen(items: _items),)
          
-         
-      // ),
- 
 
-      // addis chamber contact bar
-      
 
-      bottomNavigationBar:const BottomNav(),
+        ],
+      ),
+          bottomNavigationBar:const BottomNav(),
 
 
     );

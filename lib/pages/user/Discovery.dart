@@ -1,22 +1,36 @@
-import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:chamber_of_commerce/widgets/SearchField.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
-class Discovery extends StatelessWidget {
+class Discovery extends StatefulWidget {
   const Discovery({super.key});
 
   @override
+  State<Discovery> createState() => _DiscoveryState();
+}
+
+class _DiscoveryState extends State<Discovery> {
+   List <Map<String,dynamic>> Companies = [
+    {
+     "company_Name":"Awash",
+     "sector":"Bank",
+     "Image":"assets/images/awash_logo.svg"
+    },
+  ];
+  @override
   Widget build(BuildContext context) {
-     final _items =  [
-     "assets/images/awash.svg",
-     "assets/images/air.svg",
-     "assets/images/dashen.svg"
+  //    final _items =  [
+  //    "assets/images/awash.svg",
+  //    "assets/images/air.svg",
+  //    "assets/images/dashen.svg"
    
    
 
-  ];
+  // ];
      var scaffold = Scaffold(
       //  drawer:const BackButton(
       //   //  backgroundColor: Colors.white,
@@ -30,54 +44,83 @@ class Discovery extends StatelessWidget {
 
       appBar: AppBar(
         backgroundColor:Color.fromARGB(255,229,234,232),
-        title: const Flexible(child: SearchField()),
+        title: const Flexible(child: SearchField(),flex: 1,),
          shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(30.0), // Set border radius
     ),
       ),
-        //  leading: IconButton(
-        //   icon: Icon(Icons.arrow_back),
-        //   onPressed:()=>{
-        //    Navigator.push(
-        //       context,
-        //       MaterialPageRoute(builder: (context) => Home()),
-        //     ),
-        //     }
-        //   ),
-        // padding: const EdgeInsets.all(16.0), // Add padding on all sides
-   
-        // SearchField(),
-        // title:const Text(
-        //   'Discovery',
-        //   style: TextStyle(
-        //    color: Colors.black,
-        //    fontWeight: FontWeight.bold,
-        //    fontSize: 18,
-        //   ),
-        // ),
-       //should be replace by botton
-        // actions: [
-      //     IconButton(
-      //       //compnany logo heres
-      //   icon: const Icon(Icons.notifications),
-      //   onPressed: () {
-      //     // Handle notification tap
-      //   },
-      // ),
-      //  Expanded(child: SearchField()),
-    // ],
-        // elevation: 0.0,//remove shadow
-        // centerTitle: true,
-
-      //  bottom:PreferredSize(
-      //   preferredSize: Size.fromHeight(kToolbarHeight),
-      //   child:SearchField()) 
-      // ),
+       
       
-      body:
+       body: 
+       Padding(padding: const EdgeInsets.all(20.0),
+       
+         child:Column(children: [
+
+           Row(children: [
+            SvgPicture.asset('assets/images/discovery_page_icons/banks.svg' ),
+             const SizedBox(width: 20.0),
+            Text("Banks"),
+            const SizedBox(width: 150.0),
+            TextButton(onPressed:(){}, child: Text('see more')),
+
+          ],),
+           Spacer(),
+            Row(children: [
+            SvgPicture.asset('assets/images/discovery_page_icons/banks.svg' ),
+            const SizedBox(width: 20.0),
+            Text("Insurance"),
+            const SizedBox(width: 130.0),
+            TextButton(onPressed:(){}, child: Text('see more')),
+          ],),
+          Spacer(),
+           Row(children: [
+            SvgPicture.asset('assets/images/discovery_page_icons/banks.svg' ),
+             const SizedBox(width: 20.0),
+            Text("Banks"),
+            const SizedBox(width: 150.0),
+            TextButton(onPressed:(){}, child: Text('see more')),
+          ],),
+       
+         ],) 
+          //  SizedBox(width: 220)
+          
+          
+          
+          
+          ),
+      // ListView.builder(
+      //     itemCount: Companies.length,
+      //     itemBuilder: (context, index) {
+      //       return Row(
+      //         children: [
+      //           Expanded(
+      //             child: Container(
+      //               padding: const EdgeInsets.all(8.0),
+      //               child: Text(Companies[index]['company_Name']),
+      //             ),
+      //           ),
+      //           const SizedBox(width: 8.0), // Add spacing between containers
+      //           Expanded(
+      //             child: Container(
+      //               padding: const EdgeInsets.all(2.0),
+      //               child: SvgPicture.asset('assets/images/awash_logo.svg'), // Replace with image widget if available
+      //             ),
+      //           ),
+      //           const SizedBox(width: 8.0), // Add spacing between containers
+      //           Expanded(
+      //             child: Container(
+      //               padding: const EdgeInsets.all(8.0),
+      //               child: SvgPicture.asset('assets/images/trash.svg'), // Replace with additional data widget
+      //             ),
+      //           ),
+      //         ],
+      //       );
+      //     },
+
+      //   ),
       //  ListView(
         // children: [
-             GridScreen(items: _items),
+            //  GridScreen(items: _items),
             //  GridSingle()
         // ],
       // ),
@@ -111,21 +154,12 @@ class Discovery extends StatelessWidget {
 
       // addis chamber contact bar
       
-
       bottomNavigationBar:const BottomNav(),
+     
 
     );
     return scaffold;
   }
 
- Widget _buildCard(String item) {
-    return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Text(item),
-        ),
-      ),
-    );
-  }
+
 }

@@ -1,4 +1,4 @@
-import 'package:chamber_of_commerce/pages/Home.dart';
+import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -37,7 +37,7 @@ class About extends StatelessWidget {
     ),
        
         title:const Text(
-          'Addis Chambers',
+          'Addis Chamber',
           style: TextStyle(
            color: Colors.black,
            fontWeight: FontWeight.bold,
@@ -55,11 +55,41 @@ class About extends StatelessWidget {
       
       body: 
       // Container(
-         Container(
+        Column(
+             children:[
+              Container(
             margin: const EdgeInsets.all(20.0),
             ///place holder for slider 
             child: SvgPicture.asset('assets/images/chamber_logo_about_page.svg')
          ),
+         Padding(padding: const EdgeInsets.all(20.0),
+        child:Column(
+          children: [
+                Text("Established in 1947, AACCSA is a voluntary, non-governmental, business membership organization with more than 17,000 member companies. The chamber serves as a credible voice of business and advocates for the creation of a conducive business environment. It also promotes trade and industry, disseminating business information, consulting government and members on economic development and business issues, establishing friendly relationship with similar chambers in other countries, and exchanging information as well as engaging in arbitration in times of disputes among businesses."),
+                Row(
+                 children: [
+                  Padding(padding:const EdgeInsets.all(12.0),
+                  child: 
+                  SvgPicture.asset('assets/images/phone_icon.svg')
+                  
+                   ),
+                   Column(
+                    children: [
+                       Text("Phone "),
+                       Text("+251 115 518 055")
+
+                    ]
+                         
+                   )
+                   
+                 ],
+                ),
+          ],
+        ) 
+        ),
+        ])
+         
+         
           
     
       
