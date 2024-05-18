@@ -2,6 +2,7 @@
 
 
 
+import 'package:chamber_of_commerce/pages/user/Company.dart';
 import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:flutter/material.dart';
@@ -48,11 +49,12 @@ class _GridScreenState extends State<GridScreen> {
     
     Card(
       color: const Color.fromARGB(255, 255, 255, 255),
+      
       child: GestureDetector(
         onTap: (){
            Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const Almanac()),
+              MaterialPageRoute(builder: (context) => const Company()),
             );
           // Navigator.push(context as BuildContext, MaterialPageRoute(builder: (context)=> const Home()));
           // print('card tapped');

@@ -14,7 +14,15 @@ class Business extends StatelessWidget {
       "assets/images/agriculture.svg",
      "assets/images/capital_goods.svg",
      "assets/images/finance.svg",
-     "assets/images/trade.svg"
+     "assets/images/trade.svg",
+     "assets/images/agriculture.svg",
+     "assets/images/capital_goods.svg",
+     "assets/images/finance.svg",
+     "assets/images/trade.svg",
+     "assets/images/agriculture.svg",
+     "assets/images/capital_goods.svg",
+     "assets/images/finance.svg",
+     "assets/images/trade.svg",
 
    
 
@@ -31,7 +39,9 @@ class Business extends StatelessWidget {
 
 
       appBar: AppBar(
+        // Padding: const EdgeInsets.only(left: 20.0, top: 15.0, right: 10.0, bottom: 5.0),
         backgroundColor:Color.fromARGB(255, 255, 241, 209),
+      
          leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed:()=>{
@@ -67,10 +77,15 @@ class Business extends StatelessWidget {
         centerTitle: true,
       ),
       
-      body: Column(
+      body:  
+      Column(
         children: [
+          // Slider(value: value, onChanged: onChanged),
           SvgPicture.asset('assets/images/adv_medroc.svg'),
-          Expanded(child:  GridScreen(items: _items),)
+          Padding(padding: EdgeInsets.all(20)),
+          Expanded(child:  
+          Padding(padding: EdgeInsets.all(20),
+         child: GridScreen(items: _items),),)
          
 
 

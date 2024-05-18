@@ -31,6 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   provider : ^6.0.0
+  video_player: ^2.8.6
 
  
    
@@ -100,9 +101,16 @@ flutter:
     - assets/images/chamber_logo_about_page.svg
     - assets/images/chamber_icon.svg
     - assets/images/trash.svg
+    - assets/images/mail_icon.svg
+    - assets/images/web_icon.svg
+    - assets/images/time_icon.svg
+    - assets/images/address_icon.svg
+    - assets/images/trash.svg
     - assets/images/awash_logo.svg
     - assets/images/phone_icon.svg
     - assets/images/discovery_page_icons/banks.svg
+    - assets/images/company_icon/company_awash.svg
+    - assets/video/Awash.mp4
 
     # - images/a_dot_ham.jpeg
 

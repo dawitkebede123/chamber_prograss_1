@@ -44,7 +44,7 @@ class _DiscoveryState extends State<Discovery> {
 
       appBar: AppBar(
         backgroundColor:Color.fromARGB(255,229,234,232),
-        title: const Flexible(child: SearchField(),flex: 1,),
+        title: const Expanded(child: SearchField(),flex: 1,),
          shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(30.0), // Set border radius
     ),

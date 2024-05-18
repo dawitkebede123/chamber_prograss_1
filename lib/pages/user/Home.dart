@@ -119,9 +119,31 @@ const SizedBox(width: 20.0),
         child: const Image(
         image:AssetImage('assets/images/adv.png')
       )
-      )
+      ),
+       Container(
+                height: 70,
+         padding: EdgeInsets.only(
+             left: MediaQuery.of(context).size.width * 0.05,
+             right: MediaQuery.of(context).size.width * 0.05, // 10% of screen width
+            //  top: MediaQuery.of(context).size.height * 0.1,
+             bottom: MediaQuery.of(context).size.height * 0.1
+        //       // 5% of screen height 
+                 ),
+               decoration: BoxDecoration(
+    border: Border.all(
+      color: Color.fromARGB(255,229,234,232), // Set border color
+      width: 1.0,
+    ),
+      borderRadius:BorderRadius.circular(20), // Set border width
+
+  ),  
+              ///place holder for slider 
+      
+      child: Text('dsds'),      // child: SvgPicture.asset('assets/images/chamber_logo_about_page.svg')
+         ),
      
         ],
+        
          
          
       ),
@@ -133,42 +155,6 @@ const SizedBox(width: 20.0),
     return scaffold;
   }
 }
-
-
-// ///the two big buttons builder widget
-//  Widget buildButton({required String text,required String description, required IconData icon,required String targetPage}) {
-//     return ElevatedButton.icon(
-//       onPressed: () {
-//       // Navigate to the target page
-//       Navigator.push(
-//         context as BuildContext,
-//         MaterialPageRoute(builder: (context) => targetPageWidget(targetPage)), // Use a function to build the target page
-//       );
-//     },
-//       icon: Column( 
-//        mainAxisSize: MainAxisSize.min, // Content fits within button height
-//       crossAxisAlignment: CrossAxisAlignment.center,
-//       children: [  Icon(icon, size: 30.0, color: Colors.white)]
-//         ),
-//       // icon: Icon(icon, size: 30.0, color: Colors.white),
-//       label: Column( // Use a Column widget for vertical alignment
-//       mainAxisSize: MainAxisSize.min, // Content fits within button height
-//       crossAxisAlignment: CrossAxisAlignment.center, // Center content horizontally
-//       children: [
-//         Text(text, style: TextStyle(fontSize: 18.0, color: Colors.white)),
-//         const SizedBox(height: 8.0), // Add some spacing between text lines
-//         Text(description, style: TextStyle(fontSize: 14.0, color: Colors.grey)),
-//       ],
-//     ),
-//       style: ElevatedButton.styleFrom(
-//         backgroundColor: Color.fromARGB(0, 63, 255, 146),
-//         minimumSize: Size(180.0, 150.0), // Set button size
-//         shape: RoundedRectangleBorder(
-//           borderRadius: BorderRadius.circular(10.0), // Add rounded corners
-//         ),
-//       ),
-//     );
-//   }
 
 
   Widget targetPageWidget(String targetPage) {

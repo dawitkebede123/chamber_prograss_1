@@ -84,6 +84,24 @@ class About extends StatelessWidget {
                    
                  ],
                 ),
+                  Row(
+                 children: [
+                  Padding(padding:const EdgeInsets.all(12.0),
+                  child: 
+                  SvgPicture.asset('assets/images/mail_icon.svg')
+                  
+                   ),
+                   Column(
+                    children: [
+                       Text("Email "),
+                       Text("info@addischamber.com")
+
+                    ]
+                         
+                   )
+                   
+                 ],
+                ),
           ],
         ) 
         ),

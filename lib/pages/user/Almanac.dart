@@ -14,7 +14,9 @@ class Almanac extends StatelessWidget {
    "assets/images/agriculture.svg",
      "assets/images/capital_goods.svg",
      "assets/images/finance.svg",
-     "assets/images/trade.svg"
+     "assets/images/trade.svg",
+     "assets/images/agriculture.svg",
+     "assets/images/capital_goods.svg",
 
    
    
@@ -68,9 +70,12 @@ class Almanac extends StatelessWidget {
     
       body: Column(
         children: [
-          SvgPicture.asset('assets/images/adv_medroc.svg'),
-          Expanded(child:  GridScreen(items: _items),)
-         
+        SvgPicture.asset('assets/images/adv_medroc.svg'),
+          Padding(padding: EdgeInsets.all(20)),
+          Expanded(child:  
+          Padding(padding: EdgeInsets.all(20),
+         child: GridScreen(items: _items),),)
+          
 
 
         ],
