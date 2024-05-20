@@ -4,6 +4,7 @@ import 'package:chamber_of_commerce/pages/user/Business.dart';
 import 'package:chamber_of_commerce/pages/user/Category.dart';
 import 'package:chamber_of_commerce/pages/user/Discovery.dart';
 import 'package:chamber_of_commerce/pages/user/Favorite.dart';
+import 'package:chamber_of_commerce/pages/user/Notify.dart';
 import 'package:chamber_of_commerce/widgets/AboutUs.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/SearchField.dart';
@@ -68,6 +69,10 @@ class _HomeState extends State<Home> {
           IconButton(
         icon: const Icon(Icons.notifications),
         onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Notify()),
+            );
           // Handle notification tap
         },
       ),
@@ -80,10 +85,15 @@ class _HomeState extends State<Home> {
         children: [
 
           ////slider
-          Container(
-            ///place holder for slider 
-            child: SvgPicture.asset('assets/images/chamber-logo.svg')
-                  
+          ///
+       
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Container(
+              ///place holder for slider 
+              child: SvgPicture.asset('assets/images/chamber-logo.svg')
+                    
+            ),
           ),
 
         //search field
@@ -112,34 +122,65 @@ class _HomeState extends State<Home> {
           ),
         ),
 
-
-     //place holder for advertisment
-const SizedBox(width: 20.0),
+            // )
       Container(
         child: const Image(
         image:AssetImage('assets/images/adv.png')
       )
       ),
-       Container(
-                height: 70,
-         padding: EdgeInsets.only(
+     //place holder for advertisment
+const SizedBox(width: 40.0),
+      Padding(padding: EdgeInsets.only(
              left: MediaQuery.of(context).size.width * 0.05,
              right: MediaQuery.of(context).size.width * 0.05, // 10% of screen width
             //  top: MediaQuery.of(context).size.height * 0.1,
              bottom: MediaQuery.of(context).size.height * 0.1
         //       // 5% of screen height 
                  ),
-               decoration: BoxDecoration(
-    border: Border.all(
-      color: Color.fromARGB(255,229,234,232), // Set border color
-      width: 1.0,
-    ),
+        child:Container(
+                height: 100,
+                  decoration: BoxDecoration(
+    // border: Border.all(
+    //   color: Color.fromARGB(255,229,234,232), // Set border color
+    //   width: 1.0,
+    // ),
+              color: const Color.fromARGB(255,229,234,232),
+
       borderRadius:BorderRadius.circular(20), // Set border width
 
-  ),  
+  ),
+  child: Padding(
+    padding: EdgeInsets.all(20.0),
+    child: Row(children: [
+    
+            // Text('ds'),      // child: SvgPicture.asset('assets/images/chamber_logo_about_page.svg')
+            SvgPicture.asset('assets/images/social_media_icons/logo.svg'),
+            SizedBox(width: 40,),
+             SvgPicture.asset('assets/images/social_media_icons/facebook.svg'),
+            SizedBox(width: 10,),
+            SvgPicture.asset('assets/images/social_media_icons/twitter.svg'),
+            SizedBox(width: 10,),
+             SvgPicture.asset('assets/images/social_media_icons/telegram.svg'),
+            SizedBox(width: 10,),
+            SvgPicture.asset('assets/images/social_media_icons/email.svg'),
+            
+             
+             
+        ],),
+  )         
+      )
+        
+          
+        //  padding: EdgeInsets.only(
+        //      left: MediaQuery.of(context).size.width * 0.05,
+        //      right: MediaQuery.of(context).size.width * 0.05, // 10% of screen width
+        //     //  top: MediaQuery.of(context).size.height * 0.1,
+        //      bottom: MediaQuery.of(context).size.height * 0.1
+        // //       // 5% of screen height 
+        //          ),
+             
               ///place holder for slider 
-      
-      child: Text('dsds'),      // child: SvgPicture.asset('assets/images/chamber_logo_about_page.svg')
+     
          ),
      
         ],
@@ -148,7 +189,7 @@ const SizedBox(width: 20.0),
          
       ),
      
-      bottomNavigationBar: const BottomNav(),
+      bottomNavigationBar: const BottomNav(index: 0,),
       
     
     );

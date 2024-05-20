@@ -154,7 +154,7 @@ class _DiscoveryState extends State<Discovery> {
 
       // addis chamber contact bar
       
-      bottomNavigationBar:const BottomNav(),
+      bottomNavigationBar:const BottomNav(index: 1,),
      
 
     );

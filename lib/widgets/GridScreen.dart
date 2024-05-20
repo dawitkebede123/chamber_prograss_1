@@ -46,8 +46,12 @@ class _GridScreenState extends State<GridScreen> {
 }
  Widget _buildCard(String item, BuildContext context) {
     return 
+    Container(
+      width: 94,
+      height: 94,
     
-    Card(
+     child:  Card(
+      margin: EdgeInsets.all(10),
       color: const Color.fromARGB(255, 255, 255, 255),
       
       child: GestureDetector(
@@ -68,6 +72,7 @@ class _GridScreenState extends State<GridScreen> {
             // image:AssetImage(item)
                     // ),
       ),
+    ),
     ),
     );
   }

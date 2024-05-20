@@ -2,6 +2,7 @@ import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Category extends StatelessWidget {
   const Category({super.key});
@@ -55,13 +56,11 @@ class Category extends StatelessWidget {
           ),
         ),
        //should be replace by botton
-        actions: [
-          IconButton(
-        icon: const Icon(Icons.notifications),
-        onPressed: () {
-          // Handle notification tap
-        },
-      ),
+      actions: [
+         Padding(padding: EdgeInsets.only(right: 20),
+         child:  SvgPicture.asset('assets/images/chamber_icon.svg')
+          ,),
+         
     ],
         elevation: 0.0,//remove shadow
         centerTitle: true,
@@ -105,7 +104,7 @@ class Category extends StatelessWidget {
       // addis chamber contact bar
       
 
-      bottomNavigationBar:const BottomNav(),
+      bottomNavigationBar:const BottomNav(index: 3,),
 
     );
     return scaffold;

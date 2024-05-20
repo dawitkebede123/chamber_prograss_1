@@ -55,7 +55,7 @@ class About extends StatelessWidget {
       
       body: 
       // Container(
-        Column(
+        ListView(
              children:[
               Container(
             margin: const EdgeInsets.all(20.0),

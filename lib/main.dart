@@ -3,6 +3,7 @@
 // import 'package:chamber_of_commerce/add.dart';
 // import 'package:chamber_of_commerce/detail.dart';
 import 'package:chamber_of_commerce/firebase_options.dart';
+import 'package:chamber_of_commerce/navigation.dart';
 import 'package:chamber_of_commerce/pages/admin/adminHome.dart';
 import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:chamber_of_commerce/pages/user/Business.dart';
@@ -27,7 +28,8 @@ main() async {
     // home:Almanac()
     // home:GridScreen()
     // home: BottomNav()
-     home:Home()
+     home:Home(),
+     routes: routes,
     // home: SearchFieldMoreIcon(),
     // home:MyHomePage()
 

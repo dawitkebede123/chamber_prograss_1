@@ -111,7 +111,11 @@ flutter:
     - assets/images/discovery_page_icons/banks.svg
     - assets/images/company_icon/company_awash.svg
     - assets/video/Awash.mp4
-
+    - assets/images/social_media_icons/email.svg
+    - assets/images/social_media_icons/facebook.svg
+    - assets/images/social_media_icons/logo.svg
+    - assets/images/social_media_icons/telegram.svg
+    - assets/images/social_media_icons/twitter.svg
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

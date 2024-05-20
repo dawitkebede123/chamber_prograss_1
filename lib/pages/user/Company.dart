@@ -57,15 +57,17 @@ class _CompanyState extends State<Company> {
           ),
         ),
        //should be replace by botton
-        actions: [
-          SvgPicture.asset('assets/images/chamber_icon.svg' ),
+     actions: [
+          Padding(padding: EdgeInsets.only(right: 20),
+         child:  SvgPicture.asset('assets/images/chamber_icon.svg')
+          ,),
          
     ],
         elevation: 0.0,//remove shadow
         centerTitle: true,
       ),
       
-      body: Column(
+      body: ListView(
        children: [ 
          Padding(
         padding: 
@@ -103,18 +105,20 @@ class _CompanyState extends State<Company> {
              fontSize: 18, // Increase font size for heading-like appearance
              fontWeight: FontWeight.bold, // Make the text bold
   ),), 
-      Padding(padding: EdgeInsets.only(left: 12.0,right: 12.0)),
        Text("Bank",
          style: TextStyle(
              fontSize: 9, // Increase font size for heading-like appearance
              fontWeight: FontWeight.bold, // Make the text bold
          ),)
             ],),
-            Container(
-              // width:  MediaQuery.of(context).size.width * 0.2,
-              child: SvgPicture.asset('assets/images/company_icon/company_awash.svg',width: 10,height: 30,),
+            SizedBox(
+              width:  MediaQuery.of(context).size.width * 0.1,
+              height: 70,
               // child: SvgPicture.asset('assets/images/air.svg'),
-
+              // decoration: BoxDecoration(
+              //   border: Border.all(color: Colors.black)
+              // ),
+              child: SvgPicture.asset('assets/images/awash.svg'),
             )
             // SvgPicture()
           ],
@@ -198,7 +202,7 @@ class _CompanyState extends State<Company> {
                  children: [
                   Padding(padding:const EdgeInsets.only(left: 12.0,right: 12.0),
                   child: 
-                  SvgPicture.asset('assets/images/phone_icon.svg')
+                  SvgPicture.asset('assets/images/web_icon.svg')
                   
                    ),
                    const Column(
@@ -232,7 +236,7 @@ class _CompanyState extends State<Company> {
                 ),
        ]), 
         
-         bottomNavigationBar:const BottomNav(),
+         bottomNavigationBar:const BottomNav(index: 3,),
   
         // BottomAppBar(),
     

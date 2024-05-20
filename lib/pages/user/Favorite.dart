@@ -57,7 +57,9 @@ class _FavoriteState extends State<Favorite> {
         ),
        //should be replace by botton
         actions: [
-          SvgPicture.asset('assets/images/chamber_icon.svg' ),
+        Padding(padding: EdgeInsets.only(right: 20),
+         child:  SvgPicture.asset('assets/images/chamber_icon.svg')
+          ,),
          
     ],
         elevation: 0.0,//remove shadow
@@ -104,7 +106,7 @@ class _FavoriteState extends State<Favorite> {
       
     
       
- bottomNavigationBar:const BottomNav(),
+ bottomNavigationBar:const BottomNav(index: 4,),
     );
     return scaffold;
   }

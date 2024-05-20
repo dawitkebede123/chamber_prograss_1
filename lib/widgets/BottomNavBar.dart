@@ -7,7 +7,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 class BottomNav extends StatefulWidget {
-  const BottomNav({super.key});
+  final int index;
+ //accept a  list to display in a grid
+ const BottomNav({super.key, required this.index});
+  // const BottomNav({super.key});
  
   @override
   State<BottomNav> createState() => _BottomNavState();
@@ -20,17 +23,17 @@ class BottomNav extends StatefulWidget {
 //   // return 
 // }
 class _BottomNavState extends State<BottomNav> {
-   int currentIndex = 0;
+  
+  //  int currentIndex = ;
 
-   onTap(int index){
-  setState(() {
-    currentIndex = index;
-  });
-  print(currentIndex);
- } 
+//    onTap(int index){
+//   setState(() {
+//     currentIndex = index;
+//   });
+//   print(currentIndex);
+//  } 
   @override
   Widget build(BuildContext context) {
-  
     return 
     //  Scaffold(
         //  bottomNavigationBar:
@@ -43,8 +46,7 @@ class _BottomNavState extends State<BottomNav> {
         //  Container(
             TextButton(
             onPressed:  () { 
-              onTap(0);
-                  Navigator.push(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Home()),
               );
@@ -53,7 +55,7 @@ class _BottomNavState extends State<BottomNav> {
                    //  in every icon change the color have to be change
            //give unique number for each icons
                    //  if()
-             child:SvgPicture.asset('assets/images/home.svg',color:currentIndex==0? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
+             child:SvgPicture.asset('assets/images/home.svg',color:widget.index==0? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
             
            ),
         //  ),
@@ -69,7 +71,7 @@ class _BottomNavState extends State<BottomNav> {
         //  Container(
             TextButton(
             onPressed:  () { 
-              onTap(1);
+              // onTap(1);
                   Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Discovery()),
@@ -79,7 +81,7 @@ class _BottomNavState extends State<BottomNav> {
                    //  in every icon change the color have to be change
            //give unique number for each icons
                    //  if()
-             child:SvgPicture.asset('assets/images/discovery.svg',color:currentIndex==1? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
+             child:SvgPicture.asset('assets/images/discovery.svg',color:widget.index==1? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
             
            ),
         //  ),
@@ -92,7 +94,7 @@ class _BottomNavState extends State<BottomNav> {
           // icon: Image(image: AssetImage('assets/images/business_small.png')),
            icon: TextButton(
           onPressed:  () { 
-            onTap(2);
+            // onTap(2);
                 Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => Business()),
@@ -100,7 +102,7 @@ class _BottomNavState extends State<BottomNav> {
           },
          
          
-            child:SvgPicture.asset('assets/images/business_small.svg',color:currentIndex==2?Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
+            child:SvgPicture.asset('assets/images/business_small.svg',color:widget.index==2?Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
          ),
            
          label: 'Business',
@@ -111,7 +113,7 @@ class _BottomNavState extends State<BottomNav> {
         //  icon: Image(image: AssetImage('assets/images/almanac_small.png')),
          icon: TextButton(
           onPressed:  () { 
-            onTap(3);
+            // onTap(3);
                 Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => Almanac()),
@@ -119,7 +121,7 @@ class _BottomNavState extends State<BottomNav> {
           },
          //ontab the icon color change programmatically
          //change the index to current index
-           child:SvgPicture.asset('assets/images/almanac_small.svg',color:currentIndex==3?Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),     
+           child:SvgPicture.asset('assets/images/almanac_small.svg',color:widget.index==3?Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),     
            
                   ),
          label: 'Almanac',
@@ -131,7 +133,7 @@ class _BottomNavState extends State<BottomNav> {
         //  icon: Image(image: AssetImage('assets/images/favorite.png')),
          icon: TextButton(
           onPressed:  () { 
-            onTap(4);
+            // onTap(4);
                 Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => Favorite()),
@@ -140,7 +142,7 @@ class _BottomNavState extends State<BottomNav> {
          
           
            // ignore: deprecated_member_use
-          child:SvgPicture.asset('assets/images/favorite.svg',color:currentIndex==4?Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
+          child:SvgPicture.asset('assets/images/favorite.svg',color:widget.index==4?Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
          ),
          label: 'Favorite',
           // backgroundColor: Color(0X00723F),

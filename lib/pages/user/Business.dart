@@ -65,13 +65,11 @@ class Business extends StatelessWidget {
           ),
         ),
        //should be replace by botton
-        actions: [
-          IconButton(
-        icon: const Icon(Icons.notifications),
-        onPressed: () {
-          // Handle notification tap
-        },
-      ),
+       actions: [
+          Padding(padding: EdgeInsets.only(right: 20),
+         child:  SvgPicture.asset('assets/images/chamber_icon.svg')
+          ,),
+         
     ],
         elevation: 0.0,//remove shadow
         centerTitle: true,
@@ -82,16 +80,17 @@ class Business extends StatelessWidget {
         children: [
           // Slider(value: value, onChanged: onChanged),
           SvgPicture.asset('assets/images/adv_medroc.svg'),
-          Padding(padding: EdgeInsets.all(20)),
-          Expanded(child:  
-          Padding(padding: EdgeInsets.all(20),
-         child: GridScreen(items: _items),),)
+          Expanded( 
+            // child:margin()
+              child: GridScreen(items: _items)
+              )
+            
          
 
 
         ],
       ),
-          bottomNavigationBar:const BottomNav(),
+          bottomNavigationBar:const BottomNav(index: 2,),
 
 
      

@@ -56,13 +56,11 @@ class Almanac extends StatelessWidget {
           ),
         ),
        //should be replace by botton
-        actions: [
-          IconButton(
-        icon: const Icon(Icons.notifications),
-        onPressed: () {
-          // Handle notification tap
-        },
-      ),
+         actions: [
+          Padding(padding: EdgeInsets.only(right: 20),
+         child:  SvgPicture.asset('assets/images/chamber_icon.svg')
+          ,),
+         
     ],
         elevation: 0.0,//remove shadow
         centerTitle: true,
@@ -80,7 +78,7 @@ class Almanac extends StatelessWidget {
 
         ],
       ),
-          bottomNavigationBar:const BottomNav(),
+          bottomNavigationBar:const BottomNav(index: 3,),
 
 
     );
