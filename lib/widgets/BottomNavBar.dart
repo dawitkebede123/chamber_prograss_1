@@ -16,12 +16,7 @@ class BottomNav extends StatefulWidget {
   State<BottomNav> createState() => _BottomNavState();
 }
 
-///change the current index if the onTap is change, tab handle globally
-// onTap(index){
 
-// //  currentIndex = index;
-//   // return 
-// }
 class _BottomNavState extends State<BottomNav> {
   
   //  int currentIndex = ;

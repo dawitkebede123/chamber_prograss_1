@@ -7,6 +7,7 @@ import 'package:chamber_of_commerce/pages/user/Favorite.dart';
 import 'package:chamber_of_commerce/pages/user/Notify.dart';
 import 'package:chamber_of_commerce/widgets/AboutUs.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
+import 'package:chamber_of_commerce/widgets/CustomBottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/SearchField.dart';
 import 'package:chamber_of_commerce/widgets/SearchMoreIcon.dart';
 import 'package:chamber_of_commerce/widgets/drawer.dart';
@@ -36,7 +37,7 @@ class _HomeState extends State<Home> {
    
     var scaffold = Scaffold(
         drawer: Drawer(
-        width: MediaQuery.of(context).size.width * 0.80,
+        width: MediaQuery.of(context).size.width * 1,
          backgroundColor: Colors.white,
          child: About(),
       //     child: ListView(
@@ -98,7 +99,7 @@ class _HomeState extends State<Home> {
 
         //search field
          SearchField(),
-
+         const SizedBox(height: 10.0),
           //two big buttons
        Container(
          
@@ -114,22 +115,23 @@ class _HomeState extends State<Home> {
               //    targetPage:"BusinessPage",
                  
               //    ),
-              SizedBox(width: 20.0), // Add spacing between buttons
+              SizedBox(width: 15.0), // Add spacing between buttons
               CenteredVerticalList(path:'assets/images/almanac_large.svg', text1: "Almanac", text2: "Financial Business"),
               // buildButton(text: 'Almanac',description: "Financial Business", icon: Icons.abc,targetPage:"AlmanacPage"),
               
             ],
           ),
         ),
-
+          const SizedBox(height: 10.0),
             // )
       Container(
+        height:170 ,
         child: const Image(
         image:AssetImage('assets/images/adv.png')
       )
       ),
      //place holder for advertisment
-const SizedBox(width: 40.0),
+const SizedBox(height: 10.0),
       Padding(padding: EdgeInsets.only(
              left: MediaQuery.of(context).size.width * 0.05,
              right: MediaQuery.of(context).size.width * 0.05, // 10% of screen width
@@ -138,7 +140,7 @@ const SizedBox(width: 40.0),
         //       // 5% of screen height 
                  ),
         child:Container(
-                height: 100,
+                height: 70,
                   decoration: BoxDecoration(
     // border: Border.all(
     //   color: Color.fromARGB(255,229,234,232), // Set border color
@@ -150,7 +152,7 @@ const SizedBox(width: 40.0),
 
   ),
   child: Padding(
-    padding: EdgeInsets.all(20.0),
+    padding: EdgeInsets.all(10.0),
     child: Row(children: [
     
             // Text('ds'),      // child: SvgPicture.asset('assets/images/chamber_logo_about_page.svg')
@@ -189,8 +191,8 @@ const SizedBox(width: 40.0),
          
       ),
      
-      bottomNavigationBar: const BottomNav(index: 0,),
-      
+      // bottomNavigationBar: const BottomNav(index: 0,),
+      bottomNavigationBar: const CustomeButtomNavBar(index: 0),
     
     );
     return scaffold;

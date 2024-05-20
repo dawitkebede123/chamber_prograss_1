@@ -60,7 +60,7 @@ class CenteredVerticalList extends StatelessWidget {
         else{
            Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const Almanac()),
+              MaterialPageRoute(builder: (context) =>  Almanac()),
             );
         }
        

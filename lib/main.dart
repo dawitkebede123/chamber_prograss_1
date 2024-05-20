@@ -11,6 +11,7 @@ import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:chamber_of_commerce/widgets/SearchMoreIcon.dart';
+import 'package:chamber_of_commerce/widgets/TopNav.dart';
 import 'package:firebase_core/firebase_core.dart';
 // import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,9 @@ main() async {
     // home:Almanac()
     // home:GridScreen()
     // home: BottomNav()
-     home:Home(),
+    // home:const TopNav(index: 0),
+    
+      home:Home(),
      routes: routes,
     // home: SearchFieldMoreIcon(),
     // home:MyHomePage()

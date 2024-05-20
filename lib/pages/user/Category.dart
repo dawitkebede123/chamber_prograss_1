@@ -1,5 +1,6 @@
 import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
+import 'package:chamber_of_commerce/widgets/CustomBottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -104,7 +105,7 @@ class Category extends StatelessWidget {
       // addis chamber contact bar
       
 
-      bottomNavigationBar:const BottomNav(index: 3,),
+      bottomNavigationBar:const CustomeButtomNavBar(index: 3,),
 
     );
     return scaffold;

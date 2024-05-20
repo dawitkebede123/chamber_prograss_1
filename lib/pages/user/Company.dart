@@ -2,6 +2,7 @@
 
 import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
+import 'package:chamber_of_commerce/widgets/CustomBottomNavBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -236,7 +237,7 @@ class _CompanyState extends State<Company> {
                 ),
        ]), 
         
-         bottomNavigationBar:const BottomNav(index: 3,),
+         bottomNavigationBar:const CustomeButtomNavBar(index: 3,),
   
         // BottomAppBar(),
     

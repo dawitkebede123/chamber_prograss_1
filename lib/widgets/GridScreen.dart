@@ -48,9 +48,10 @@ class _GridScreenState extends State<GridScreen> {
     return 
     Container(
       width: 94,
-      height: 94,
+      // height: 94,
     
-     child:  Card(
+     child: ListView(children: [  
+       Card(
       margin: EdgeInsets.all(10),
       color: const Color.fromARGB(255, 255, 255, 255),
       
@@ -65,8 +66,8 @@ class _GridScreenState extends State<GridScreen> {
         },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: 
-           SvgPicture.asset(item),
+          child:  SvgPicture.asset(item),
+        
 
         // Image(
             // image:AssetImage(item)
@@ -74,5 +75,8 @@ class _GridScreenState extends State<GridScreen> {
       ),
     ),
     ),
+    const Text("sector")
+     ])
+    //the sector name
     );
   }

@@ -1,6 +1,7 @@
 import 'package:chamber_of_commerce/pages/user/Company.dart';
 import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
+import 'package:chamber_of_commerce/widgets/CustomBottomNavBar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,7 +17,7 @@ class _NotifyState extends State<Notify> {
     {
      "company_Name":"Awash",
      "Image":"assets/images/awash_logo.svg",
-     "date":"today",
+     "date":"Today",
      "time":"11:45"
     }
   ];
@@ -139,7 +140,7 @@ class _NotifyState extends State<Notify> {
                                 MaterialPageRoute(builder: (context) => Company()),
                                      );
                           },
-                          child: Text('explore Now'),
+                          child: Text('Explore Now'),
                           style: TextButton.styleFrom(
                             textStyle: const TextStyle(color: Colors.black),
                             backgroundColor: const Color.fromARGB(255,229,234,232), // Optional background color
@@ -173,7 +174,7 @@ class _NotifyState extends State<Notify> {
       
     
       
- bottomNavigationBar:const BottomNav(index: -1,),
+ bottomNavigationBar:const CustomeButtomNavBar(index: -1,),
     );
     return scaffold;
   }

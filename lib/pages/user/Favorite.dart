@@ -1,5 +1,6 @@
 import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
+import 'package:chamber_of_commerce/widgets/CustomBottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -106,7 +107,7 @@ class _FavoriteState extends State<Favorite> {
       
     
       
- bottomNavigationBar:const BottomNav(index: 4,),
+ bottomNavigationBar:const CustomeButtomNavBar(index: 4,),
     );
     return scaffold;
   }
