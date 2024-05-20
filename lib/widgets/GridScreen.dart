@@ -50,33 +50,40 @@ class _GridScreenState extends State<GridScreen> {
       width: 94,
       // height: 94,
     
-     child: ListView(children: [  
-       Card(
-      margin: EdgeInsets.all(10),
-      color: const Color.fromARGB(255, 255, 255, 255),
-      
-      child: GestureDetector(
-        onTap: (){
-           Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const Company()),
-            );
-          // Navigator.push(context as BuildContext, MaterialPageRoute(builder: (context)=> const Home()));
-          // print('card tapped');
-        },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-          child:  SvgPicture.asset(item),
+     child: 
+     ListView(children: [
+    
+       child: Column(children: [  
+         Card(
+        margin: EdgeInsets.all(10),
+        color: const Color.fromARGB(255, 255, 255, 255),
         
-
-        // Image(
-            // image:AssetImage(item)
-                    // ),
-      ),
-    ),
-    ),
-    const Text("sector")
-     ])
+        child: GestureDetector(
+          onTap: (){
+             Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Company()),
+              );
+            // Navigator.push(context as BuildContext, MaterialPageRoute(builder: (context)=> const Home()));
+            // print('card tapped');
+          },
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+            child:  SvgPicture.asset(item),
+          
+       
+          // Image(
+              // image:AssetImage(item)
+                      // ),
+        ),
+           ),
+           ),
+           const Text("sector")
+       ]
+       ),
+       ],
+       ),
+     )
     //the sector name
     );
   }
