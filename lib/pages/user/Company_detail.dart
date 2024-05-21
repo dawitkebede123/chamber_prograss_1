@@ -10,15 +10,15 @@ import 'package:flutter_svg/svg.dart';
 import 'package:chamber_of_commerce/widgets/VideoPlayer.dart';
 
 class CompanyDetail extends StatefulWidget {
-  
+  final Map<dynamic, dynamic> data;
+    const CompanyDetail({super.key, required this.data});
  
   @override
   State<CompanyDetail> createState() => CompanyState();
 }
 
 class CompanyState extends State<CompanyDetail> {
-   late final Map<dynamic, dynamic> data;
-    const CompanyDetail({super.key, required this.data});
+    
 
   @override
   Widget build(BuildContext context) {

@@ -2,20 +2,26 @@ import 'package:chamber_of_commerce/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-class Detail extends StatelessWidget {
+class Detail extends StatefulWidget {
   final Map<dynamic, dynamic> businessData;
 
   const Detail({required this.businessData});
+
+  @override
+  State<Detail> createState() => _DetailState();
+}
+
+class _DetailState extends State<Detail> {
   @override
   Widget build(BuildContext context) {
-    final accountNumber = businessData['Account Number'];
-    final name = businessData['Company Name'];
-    final tel = businessData['Tel'];
-    final fax = businessData['Fax'];
-    final email = businessData['E-mail'];
-    final website = businessData['Website'];
-    final sector = businessData['Sector'];
-    final subSector = businessData['Sub Sector'];
+    final accountNumber = widget.businessData['Account Number'];
+    final name = widget.businessData['Company Name'];
+    final tel = widget.businessData['Tel'];
+    final fax = widget.businessData['Fax'];
+    final email = widget.businessData['E-mail'];
+    final website = widget.businessData['Website'];
+    final sector = widget.businessData['Sector'];
+    final subSector = widget.businessData['Sub Sector'];
     // final 
     return Scaffold(
       appBar: AppBar(

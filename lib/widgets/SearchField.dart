@@ -1,4 +1,4 @@
-import 'package:chamber_of_commerce/pages/user/CompanyDetail.dart';
+import 'package:chamber_of_commerce/pages/user/Company_detail.dart';
 import 'package:chamber_of_commerce/widgets/SearchMoreIcon.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
