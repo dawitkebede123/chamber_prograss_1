@@ -102,6 +102,7 @@ flutter:
     - assets/images/chamber_icon.svg
     - assets/images/trash.svg
     - assets/images/mail_icon.svg
+    - assets/images/fax_icon.svg
     - assets/images/web_icon.svg
     - assets/images/time_icon.svg
     - assets/images/address_icon.svg

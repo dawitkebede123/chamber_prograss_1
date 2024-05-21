@@ -2,23 +2,24 @@
 
 
 
+import 'package:chamber_of_commerce/pages/user/Business_listing.dart';
 import 'package:chamber_of_commerce/pages/user/Company.dart';
 import 'package:chamber_of_commerce/pages/user/Company_with_image.dart';
 import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-class GridScreen extends StatefulWidget {
+class GridScreenForBusiness extends StatefulWidget {
  final List<String> items;
  //accept a  list to display in a grid
- const GridScreen({super.key, required this.items});
+ const GridScreenForBusiness({super.key, required this.items});
 
   
   @override
-  State<GridScreen> createState() => _GridScreenState();
+  State<GridScreenForBusiness> createState() => _GridScreenForBusinessState();
 }
 
-class _GridScreenState extends State<GridScreen> {
+class _GridScreenForBusinessState extends State<GridScreenForBusiness> {
   @override
 //  = const [
 //    "assets/images/awash.jpg",
@@ -53,7 +54,7 @@ class _GridScreenState extends State<GridScreen> {
             onTap: (){
              Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Company()),
+                MaterialPageRoute(builder: (context) => const Business_listing()),
               );},
           
         // child: Column(children: [

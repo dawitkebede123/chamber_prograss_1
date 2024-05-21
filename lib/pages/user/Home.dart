@@ -12,6 +12,8 @@ import 'package:chamber_of_commerce/widgets/SearchField.dart';
 import 'package:chamber_of_commerce/widgets/SearchMoreIcon.dart';
 import 'package:chamber_of_commerce/widgets/drawer.dart';
 import 'package:chamber_of_commerce/widgets/verticalAlign.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -31,6 +33,24 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+   Stream<DatabaseEvent>? _userStream;
+   
+  @override
+  void initState() {
+    super.initState();
+    try {
+    _userStream = FirebaseDatabase.instance.ref('Query7').onValue;
+  } on FirebaseException catch (e) {
+    print('Firebase error: ${e.code} - ${e.message}');
+    // Handle the error appropriately, potentially display a user-friendly message
+  }
+  }
+
+  @override
+  void dispose() {
+    // _searchController.dispose();
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     // final AssetImage backgroundImage = AssetImage('assets/images/logo.jpg');

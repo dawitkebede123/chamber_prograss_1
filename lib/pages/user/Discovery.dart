@@ -3,6 +3,7 @@ import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/CustomBottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:chamber_of_commerce/widgets/SearchField.dart';
+import 'package:chamber_of_commerce/widgets/SearchFieldForDiscovery.dart';
 import 'package:chamber_of_commerce/widgets/TopNav.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -33,9 +34,10 @@ class _DiscoveryState extends State<Discovery> {
    
 
   // ];
-     return Padding(
-       padding: const EdgeInsets.only(top: 30.0),
-       child: Scaffold(
+     return Scaffold(
+    //  Padding(
+      //  padding: const EdgeInsets.only(top: 20.0),
+        
         //  drawer:const BackButton(
         //   //  backgroundColor: Colors.white,
         //  ),
@@ -48,7 +50,7 @@ class _DiscoveryState extends State<Discovery> {
        
         appBar: AppBar(
           backgroundColor:Color.fromARGB(255,229,234,232),
-          title: const Expanded(child: SearchField(),flex: 1,),
+          title: const Expanded(child: SearchFieldForDiscovery(),flex: 1,),
            shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(30.0), // Set border radius
            ),
@@ -161,8 +163,8 @@ class _DiscoveryState extends State<Discovery> {
         bottomNavigationBar:const CustomeButtomNavBar(index: 1,),
        
        
-           ),
-     );
+           );
+    //  );
   }
 
 

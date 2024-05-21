@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     try {
-    _userStream = FirebaseDatabase.instance.ref('business').onValue;
+    _userStream = FirebaseDatabase.instance.ref('Query7').onValue;
   } on FirebaseException catch (e) {
     print('Firebase error: ${e.code} - ${e.message}');
     // Handle the error appropriately, potentially display a user-friendly message
@@ -129,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final filteredBusinesses = data.expand((element) {
     // ... filtering logic using entry.value as Map<String, dynamic>
-    final companyName = element['Company Name']?.toString().toLowerCase() ?? '';
+    final companyName = element['Campany Name']?.toString().toLowerCase() ?? '';
     return companyName.startsWith(_searchTerm) ? [element] : [];
   }).toList();
 
@@ -137,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
     itemCount: filteredBusinesses.length,
     itemBuilder: (context, index) {
       final businessData = filteredBusinesses[index];
-      final name = businessData['Company Name'];
+      final name = businessData['Campany Name'];
       final email = businessData['E-mail'];
       // Extract business information based on your data structure
       return ListTile(
