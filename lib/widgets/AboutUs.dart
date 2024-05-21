@@ -81,8 +81,13 @@ class About extends StatelessWidget {
 
                    const Column(
                         children: [
-                           Text("Phone "),
-                       Text("+251 115 518 055")
+                          Row(
+  // mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                                Text("Phone ",textAlign: TextAlign.left),
+                          ] 
+                          ),
+                       Text("+251 115 518 055",)
                         ],
                       )
                    
@@ -99,8 +104,8 @@ class About extends StatelessWidget {
 
                       const Column(
                         children: [
-                        Text("Email "),
-                       Text("info@addischamber.com")
+                        Text("Email ",textAlign: TextAlign.left),
+                       Text("info@addischamber.com",textAlign: TextAlign.left)
                         ],
                       )
                       

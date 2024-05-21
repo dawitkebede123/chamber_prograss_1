@@ -117,6 +117,40 @@ flutter:
     - assets/images/social_media_icons/telegram.svg
     - assets/images/social_media_icons/twitter.svg
     - assets/images/Adv_slider.svg
+    - assets/images/almanac_lists/bank.svg
+    - assets/images/almanac_lists/micro_finance.svg
+    - assets/images/almanac_lists/Insurance.svg
+    - assets/images/almanac_lists/fintech.svg
+    - assets/images/almanac_lists/capital_goods.svg
+    - assets/images/almanac_lists/telecom.svg
+    - assets/images/business_lists/agriculture.svg
+    - assets/images/business_lists/construction.svg
+    - assets/images/business_lists/community.svg
+    - assets/images/business_lists/electricity.svg
+    - assets/images/business_lists/export.svg
+    - assets/images/business_lists/finance_inter.svg
+    - assets/images/business_lists/hotel.svg
+    - assets/images/business_lists/import.svg
+    - assets/images/business_lists/wholesale.svg
+    - assets/images/business_lists/maintenance.svg
+    - assets/images/business_lists/manufacturing.svg
+    - assets/images/business_lists/mining.svg
+    - assets/images/business_lists/real_estate.svg
+    - assets/images/business_lists/importer.svg
+    - assets/images/business_lists/transport.svg
+    - assets/images/almanac_lists/company_profile_image.svg
+    - assets/images/business_lists/sample/1.svg
+    - assets/images/business_lists/sample/2.svg
+    - assets/images/business_lists/sample/3.svg
+    - assets/images/business_lists/sample/4.svg
+    - assets/images/business_lists/sample/5.svg
+    - assets/images/business_lists/sample/6.svg
+    - assets/images/business_lists/sample/mengesha.svg
+    - assets/images/business_lists/sample/tomoca.svg
+
+
+
+
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

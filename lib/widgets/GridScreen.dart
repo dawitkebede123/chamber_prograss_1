@@ -3,6 +3,7 @@
 
 
 import 'package:chamber_of_commerce/pages/user/Company.dart';
+import 'package:chamber_of_commerce/pages/user/Company_with_image.dart';
 import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:flutter/material.dart';
@@ -39,51 +40,71 @@ class _GridScreenState extends State<GridScreen> {
   Widget build(BuildContext context) {
     return  GridView.count(
         crossAxisCount: 3, // Three columns
-        childAspectRatio: 1.5, // Aspect ratio for cards (adjust as needed)
+        childAspectRatio: 1, // Aspect ratio for cards (adjust as needed)
         children:widget.items.map((String item) => _buildCard(item,context)).toList(),
       );
   }
 }
  Widget _buildCard(String item, BuildContext context) {
-    return 
-    Container(
-      width: 94,
-      // height: 94,
-    
-     child: 
-     ListView(children: [
-    
-       child: Column(children: [  
-         Card(
-        margin: EdgeInsets.all(10),
-        color: const Color.fromARGB(255, 255, 255, 255),
-        
-        child: GestureDetector(
-          onTap: (){
+    return   Container(
+      //  width: 94,
+      //  height: 250,
+       child: GestureDetector(
+            onTap: (){
              Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Company()),
-              );
-            // Navigator.push(context as BuildContext, MaterialPageRoute(builder: (context)=> const Home()));
-            // print('card tapped');
-          },
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-            child:  SvgPicture.asset(item),
+                MaterialPageRoute(builder: (context) => const CompanyWithImage()),
+              );},
+          
+        // child: Column(children: [
+          // SizedBox(height: 50,),
+        child: Padding(padding: EdgeInsets.all(10),
+            child: SvgPicture.asset(item),
+
+        ) 
+
+        // ],)
+             ,)
+    );
+    // Container(
+    //   // width: 94,
+    //   //  height: 94,
+    
+    //  child: 
+    // //  ListView(children: [
+    
+    //     Column(children: [  
+    //      Container(
+    //     // margin: EdgeInsets.all(10),
+    //     // color: const Color.fromARGB(255, 255, 255, 255),
+        
+    //     child: GestureDetector(
+    //       onTap: (){
+    //          Navigator.push(
+    //             context,
+    //             MaterialPageRoute(builder: (context) => const Company()),
+    //           );
+    //         // Navigator.push(context as BuildContext, MaterialPageRoute(builder: (context)=> const Home()));
+    //         // print('card tapped');
+    //       },
+    //     child: Padding(
+    //       padding: const EdgeInsets.all(8.0),
+    //         child:  SvgPicture.asset(item),
           
        
-          // Image(
-              // image:AssetImage(item)
-                      // ),
-        ),
-           ),
-           ),
-           const Text("sector")
-       ]
-       ),
-       ],
-       ),
-     )
+    //       // Image(
+    //           // image:AssetImage(item)
+    //                   // ),
+    //     ),
+    //       //  const Text("sector")
+
+    //        ),
+    //        ),
+    //    ]
+    //    ),
+    //   //  ],
+    //   //  ),
+    //  );
     //the sector name
-    );
+    // );
   }

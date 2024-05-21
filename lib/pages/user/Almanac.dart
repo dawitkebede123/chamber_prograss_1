@@ -36,12 +36,13 @@ class Almanac extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      const _items = [
-   "assets/images/finance.svg",
-     "assets/images/capital_goods.svg",
-     "assets/images/finance.svg",
-     "assets/images/trade.svg",
-     "assets/images/agriculture.svg",
-     "assets/images/capital_goods.svg",
+    "assets/images/almanac_lists/bank.svg",
+     "assets/images/almanac_lists/Insurance.svg",
+     "assets/images/almanac_lists/micro_finance.svg", 
+     "assets/images/almanac_lists/fintech.svg",
+      "assets/images/almanac_lists/telecom.svg",
+      "assets/images/almanac_lists/capital_goods.svg",
+      
 
    
    

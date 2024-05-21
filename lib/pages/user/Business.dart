@@ -12,18 +12,21 @@ class Business extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      final  _items = [
-      "assets/images/agriculture.svg",
-     "assets/images/capital_goods.svg",
-     "assets/images/finance.svg",
-     "assets/images/trade.svg",
-     "assets/images/agriculture.svg",
-     "assets/images/capital_goods.svg",
-     "assets/images/finance.svg",
-     "assets/images/trade.svg",
-     "assets/images/agriculture.svg",
-     "assets/images/capital_goods.svg",
-     "assets/images/finance.svg",
-     "assets/images/trade.svg",
+     "assets/images/business_lists/agriculture.svg",
+     "assets/images/business_lists/construction.svg",
+     "assets/images/business_lists/community.svg",
+     "assets/images/business_lists/electricity.svg",
+     "assets/images/business_lists/export.svg",
+     "assets/images/business_lists/finance_inter.svg",
+     "assets/images/business_lists/hotel.svg",
+     "assets/images/business_lists/import.svg",
+     "assets/images/business_lists/wholesale.svg",
+     "assets/images/business_lists/maintenance.svg",
+     "assets/images/business_lists/manufacturing.svg",
+     "assets/images/business_lists/mining.svg",
+     "assets/images/business_lists/real_estate.svg",
+     "assets/images/business_lists/importer.svg",
+     "assets/images/business_lists/transport.svg",
 
    
 
@@ -80,7 +83,7 @@ class Business extends StatelessWidget {
       Column(
         children: [
           // Slider(value: value, onChanged: onChanged),
-          SvgPicture.asset('assets/images/adv_medroc.svg'),
+          SvgPicture.asset('assets/images/Adv_slider.svg'),
           Expanded( 
             // child:margin()
               child: GridScreen(items: _items)
