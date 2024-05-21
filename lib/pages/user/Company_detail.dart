@@ -22,7 +22,7 @@ class CompanyState extends State<CompanyDetail> {
 
   @override
   Widget build(BuildContext context) {
-    final accountNumber = widget.data['Account Number'];
+    // final accountNumber = widget.data['Account Number'];
     final name = widget.data['Company Name'];
     final tel = widget.data['Tel'];
     final fax = widget.data['Fax'];

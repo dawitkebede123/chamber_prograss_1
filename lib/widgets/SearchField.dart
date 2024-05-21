@@ -37,8 +37,10 @@ class _SearchFieldState extends State<SearchField> {
 
   @override
   void dispose() {
-    _searchController.dispose();
     super.dispose();
+        _searchController.dispose();
+
+
   }
     void _searchCompany(String searchTerm) {
     setState(() {
@@ -160,7 +162,7 @@ TextField(
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) =>CompanyDetail(),
+              builder: (context) =>CompanyDetail(data: businessData,),
               // CompanyDetail(data: businessData),
             ),
           );
