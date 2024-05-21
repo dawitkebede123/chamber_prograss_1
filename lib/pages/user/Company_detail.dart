@@ -22,12 +22,12 @@ class CompanyState extends State<CompanyDetail> {
 
   @override
   Widget build(BuildContext context) {
-    final accountNumber = data['Account Number'];
-    final name = data['Company Name'];
-    final tel = data['Tel'];
-    final fax = data['Fax'];
-    final email = data['E-mail'];
-    final website = data['Web'];
+    final accountNumber = widget.data['Account Number'];
+    final name = widget.data['Company Name'];
+    final tel = widget.data['Tel'];
+    final fax = widget.data['Fax'];
+    final email = widget.data['E-mail'];
+    final website = widget.data['Web'];
     // final sector = data['Sector'];
     // final subSector = data['Sub Sector'];
     var scaffold = Scaffold(
