@@ -10,9 +10,12 @@ import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 class GridScreenForBusiness extends StatefulWidget {
- final List<String> items;
+ List<Map<String,dynamic>> items;
+ List<String> stringList = [];
+List<dynamic> dynamicList = [];
+
  //accept a  list to display in a grid
- const GridScreenForBusiness({super.key, required this.items});
+  GridScreenForBusiness({super.key, required this.items});
 
   
   @override
@@ -39,28 +42,38 @@ class _GridScreenForBusinessState extends State<GridScreenForBusiness> {
   //   });
   // }
   Widget build(BuildContext context) {
+      for (var map in widget.items) {
+  // Assuming "key1" holds a string and "key2" holds a dynamic value
+  widget.stringList.add(map["key1"] as String);
+  widget.dynamicList.add(map["key2"]);
+}
+
     return  GridView.count(
         crossAxisCount: 3, // Three columns
         childAspectRatio: 1, // Aspect ratio for cards (adjust as needed)
-        children:widget.items.map((String item) => _buildCard(item,context)).toList(),
-      );
+          
+        children: widget.items
+    .map((item) => _buildCard(item as Map<String, dynamic>, context)) .toList(),      );
   }
-}
- Widget _buildCard(String item, BuildContext context) {
+} 
+ Widget _buildCard(Map<String,dynamic> item, BuildContext context) {
     return   Container(
       //  width: 94,
       //  height: 250,
+      // final Map<dynamic, dynamic> businessData;
+    //  final Map<dynamic, dynamic> data = item["data"];
        child: GestureDetector(
-            onTap: (){
-             Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const Business_listing()),
-              );},
+            // onTap: (){
+            //  Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => const Business_listing(data: item["data"] as List<dynami> )),
+              // );
+              // },
           
         // child: Column(children: [
           // SizedBox(height: 50,),
         child: Padding(padding: EdgeInsets.all(10),
-            child: SvgPicture.asset(item),
+            child: SvgPicture.asset(item["logo"]),
 
         ) 
 

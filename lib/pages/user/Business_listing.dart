@@ -10,31 +10,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Business_listing extends StatefulWidget {
-  const Business_listing({super.key});
+   final List<dynamic> data;
+
+  const Business_listing({required this.data});
 
   @override
   State<Business_listing> createState() => _Business_listingState();
 }
 
 class _Business_listingState extends State<Business_listing> {
-   Stream<DatabaseEvent>? _userStream;
+  //  Stream<DatabaseEvent>? _userStream;
 
   @override
-  void initState() {
-    super.initState();
-    try {
-    _userStream = FirebaseDatabase.instance.ref('Query7').onValue;
-  } on FirebaseException catch (e) {
-    print('Firebase error: ${e.code} - ${e.message}');
-    // Handle the error appropriately, potentially display a user-friendly message
-  }
-  }
+  // void initState() {
+  //   super.initState();
+  //   try {
+  //   _userStream = FirebaseDatabase.instance.ref('Query7').onValue;
+  // } on FirebaseException catch (e) {
+  //   print('Firebase error: ${e.code} - ${e.message}');
+  //   // Handle the error appropriately, potentially display a user-friendly message
+  // }
+  // }
 
-  @override
-  void dispose() {
-    // _searchController.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   // _searchController.dispose();
+  //   super.dispose();
+  // }
 
   // void _searchCompany(String searchTerm) {
   //   setState(() {
@@ -121,14 +123,14 @@ class _Business_listingState extends State<Business_listing> {
               // SizedBox(width: 20,),
               Padding(padding: EdgeInsets.all(20),
               child:Column(children: [
-                StreamBuilder<DatabaseEvent>(builder:  (context, snapshot) {
-           return Container(
+                // StreamBuilder<DatabaseEvent>(builder:  (context, snapshot) {
+                Container(
       // Set desired height or adjust with constraints
       height: 300.0, // Adjust height as needed
       // color: Color.fromARGB(255, 142, 139, 139), // Optional background color
-      child: _buildContent(snapshot), // Call a separate function
-    );
-        }, stream: _userStream,)
+      child: _buildContent(widget.data), // Call a separate function
+    ),
+        // }, stream: _userStream,)
           //  SvgPicture.asset('assets/images/business_lists/sample/mengesha.svg'),
           //      SizedBox(height: 20,),
           //     SvgPicture.asset('assets/images/business_lists/sample/tomoca.svg'),
@@ -151,22 +153,22 @@ class _Business_listingState extends State<Business_listing> {
   ///
   ///
   ///
-    Widget _buildContent(AsyncSnapshot<DatabaseEvent> snapshot) {
-  if (snapshot.hasError) {
-    return Center(
-      child: Text('Error: ${snapshot.error}'),
-    );
-  }
+    Widget _buildContent(List<dynamic> data) {
+  // if (snapshot.hasError) {
+  //   return Center(
+  //     child: Text('Error: ${snapshot.error}'),
+  //   );
+  // }
 
-  if (snapshot.connectionState == ConnectionState.waiting) {
-    return const Center(child: CircularProgressIndicator());
-  }
+  // if (snapshot.connectionState == ConnectionState.waiting) {
+  //   return const Center(child: CircularProgressIndicator());
+  // }
 
-  final data = snapshot.data!.snapshot.value as List<dynamic>;
+  // final data = snapshot.data!.snapshot.value as List<dynamic>;
 
-  if (data.isEmpty) {
-    return const Center(child: Text('No businesses found'));
-  }
+  // if (data.isEmpty) {
+  //   return const Center(child: Text('No businesses found'));
+  // }
 
   // final filteredBusinesses = data.expand((element) {
   //   // ... filtering logic using entry.value as Map<String, dynamic>

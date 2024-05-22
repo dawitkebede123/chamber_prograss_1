@@ -22,6 +22,7 @@ class _BusinessState extends State<Business> {
    final _searchController = TextEditingController();
   String _searchTerm = '';
   Stream<DatabaseEvent>? _userStream;
+  //  final data = snapshot.data!.snapshot.value as List<dynamic>;
 
   @override
   void initState() {
@@ -47,27 +48,27 @@ class _BusinessState extends State<Business> {
   }
   @override
   
+  
   Widget build(BuildContext context) {
-     final  _items = [
-     "assets/images/business_lists/agriculture.svg",
-     "assets/images/business_lists/construction.svg",
-     "assets/images/business_lists/community.svg",
-     "assets/images/business_lists/electricity.svg",
-     "assets/images/business_lists/export.svg",
-     "assets/images/business_lists/finance_inter.svg",
-     "assets/images/business_lists/hotel.svg",
-     "assets/images/business_lists/import.svg",
-     "assets/images/business_lists/wholesale.svg",
-     "assets/images/business_lists/maintenance.svg",
-     "assets/images/business_lists/manufacturing.svg",
-     "assets/images/business_lists/mining.svg",
-     "assets/images/business_lists/real_estate.svg",
-     "assets/images/business_lists/importer.svg",
-     "assets/images/business_lists/transport.svg",
+    List<dynamic> data;
+ StreamBuilder<DatabaseEvent>(
+        stream: _userStream,
+        builder: (context, snapshot) {
+           data = snapshot.data!.snapshot.value as List<dynamic>;
+           
+          //  return null;
+           return Container(
+  
+      // Set desired height or adjust with constraints
+      height: 0, // Adjust height as needed
+      // color:s Color.fromARGB(255, 142, 139, 139), // Optional background color
+      // child: _buildContent(snapshot), // Call a separate function
+    );
+        },
 
-   
 
-  ];
+      );
+     
      var scaffold = Scaffold(
       //  drawer:const BackButton(
       //   //  backgroundColor: Colors.white,
@@ -152,10 +153,197 @@ class _BusinessState extends State<Business> {
         children: [
           // Slider(value: value, onChanged: onChanged),
           SvgPicture.asset('assets/images/Adv_slider.svg'),
-          Expanded( 
+           StreamBuilder<DatabaseEvent>(
+        stream: _userStream,
+        builder: (context, snapshot) {
+
+           final data = snapshot.data!.snapshot.value as List<dynamic>;
+             final  sector1 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+  final  sector2 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('construction') ? [element] : [];
+  }).toList();
+
+    final  sector3 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+  final  sector4 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector5 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector6 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector7 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector8 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector9 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+
+    final  sector10 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector11 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector12 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector13 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector14 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+
+    final  sector15 = data.expand((element) {
+    // ... filtering logic using entry.value as Map<String, dynamic>
+    final sector = element['Sector']?.toString().toLowerCase() ?? '';
+    return  sector.startsWith('agriculture') ? [element] : [];
+  }).toList();
+  print(sector15);
+   List<Map<String,dynamic>> _items  = [
+     { 
+ 'logo': "assets/images/business_lists/agriculture.svg",
+ "data":sector1
+     },
+     { 
+ 'logo': "assets/images/business_lists/construction.svg",
+ "data":sector2
+     },
+       { 
+ 'logo':      "assets/images/business_lists/community.svg",
+
+ "data":sector3
+     },
+       { 
+ 'logo':      "assets/images/business_lists/electricity.svg",
+
+ "data":sector4
+     },
+       { 
+ 'logo':     "assets/images/business_lists/export.svg",
+
+ "data":sector5
+     },
+       { 
+ 'logo':      "assets/images/business_lists/finance_inter.svg",
+
+ "data":sector6
+     },
+       { 
+ 'logo':      "assets/images/business_lists/hotel.svg",
+
+ "data":sector7
+     },
+       { 
+ 'logo':      "assets/images/business_lists/import.svg",
+
+ "data":sector8
+     },
+       { 
+ 'logo':      "assets/images/business_lists/wholesale.svg",
+
+ "data":sector9
+     },
+       { 
+ 'logo':      "assets/images/business_lists/maintenance.svg",
+
+ "data":sector10
+     },
+       { 
+ 'logo':      "assets/images/business_lists/manufacturing.svg",
+
+ "data":sector11
+     },
+       { 
+ 'logo':     "assets/images/business_lists/mining.svg",
+
+ "data":sector12
+     },
+       { 
+ 'logo':      "assets/images/business_lists/real_estate.svg",
+
+ "data":sector13
+     },
+       { 
+ 'logo': "assets/images/business_lists/importer.svg",
+ "data":sector14
+     },
+     
+       { 
+ 'logo': "assets/images/business_lists/transport.svg",
+ "data":sector15
+     },
+     
+
+   
+
+  ];
+         return    Expanded( 
             // child:margin()
+            
               child: GridScreenForBusiness(items: _items)
-              )
+              );
+      //    Container(
+      //          height: 200.0, // Adjust height as needed
+      // // color: Color.fromARGB(255, 142, 139, 139), // Optional background color
+      //     child: _buildContent(snapshot),
+      //       );
+
+        }),
+          // Expanded( 
+          //   // child:margin()
+            
+          //     child: GridScreenForBusiness(items: _items,)
+          //     )
             
          
 

@@ -123,27 +123,27 @@ class _BottomNavState extends State<BottomNav> {
       backgroundColor: Color.fromARGB(255, 0, 114, 63),
      
        ),
-        BottomNavigationBarItem(
+      //   BottomNavigationBarItem(
      
-        //  icon: Image(image: AssetImage('assets/images/favorite.png')),
-         icon: TextButton(
-          onPressed:  () { 
-            // onTap(4);
-                Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Favorite()),
-            );
-          },
+      //   //  icon: Image(image: AssetImage('assets/images/favorite.png')),
+      //    icon: TextButton(
+      //     onPressed:  () { 
+      //       // onTap(4);
+      //           Navigator.push(
+      //         context,
+      //         MaterialPageRoute(builder: (context) => Favorite()),
+      //       );
+      //     },
          
           
-           // ignore: deprecated_member_use
-          child:SvgPicture.asset('assets/images/favorite.svg',color:widget.index==4?Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
-         ),
-         label: 'Favorite',
-          // backgroundColor: Color(0X00723F),
-       backgroundColor: Color.fromARGB(255, 0, 114, 63),
+      //      // ignore: deprecated_member_use
+      //     child:SvgPicture.asset('assets/images/favorite.svg',color:widget.index==4?Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
+      //    ),
+      //    label: 'Favorite',
+      //     // backgroundColor: Color(0X00723F),
+      //  backgroundColor: Color.fromARGB(255, 0, 114, 63),
        
-       ),
+      //  ),
      ],
      // currentIndex: _selectedIndex,
       // selectedItemColor: Colors.amber[800],

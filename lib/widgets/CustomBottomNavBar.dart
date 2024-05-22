@@ -34,7 +34,7 @@ class _CustomeButtomNavBarState extends State<CustomeButtomNavBar> {
               );
             },
              child:Container(
-             width:MediaQuery.of(context).size.width*0.2,
+             width:MediaQuery.of(context).size.width*0.25,
 
         child:Column(children: [
          SvgPicture.asset('assets/images/home.svg',color:widget.index==0? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),
@@ -54,7 +54,7 @@ class _CustomeButtomNavBarState extends State<CustomeButtomNavBar> {
               );
             },
             child:  Container(
-                width:MediaQuery.of(context).size.width*0.2,
+                width:MediaQuery.of(context).size.width*0.25,
             child:Column(
               children: [
             SvgPicture.asset('assets/images/discovery.svg',color:widget.index==1? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),
@@ -72,7 +72,7 @@ class _CustomeButtomNavBarState extends State<CustomeButtomNavBar> {
               );
             },
             child:  Container(
-            width:MediaQuery.of(context).size.width*0.2,
+            width:MediaQuery.of(context).size.width*0.25,
         child:Column(
               children: [
          SvgPicture.asset('assets/images/business_small.svg',color:widget.index==2? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),
@@ -90,7 +90,7 @@ class _CustomeButtomNavBarState extends State<CustomeButtomNavBar> {
               );
             },
             child:  Container(
-            width:MediaQuery.of(context).size.width*0.2,
+            width:MediaQuery.of(context).size.width*0.25,
           child: Column(
               children: [
           SvgPicture.asset('assets/images/almanac_small.svg',color:widget.index==3? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),
@@ -100,23 +100,23 @@ class _CustomeButtomNavBarState extends State<CustomeButtomNavBar> {
            ),
           ),
          
-            GestureDetector(
-            onTap: (){
-                Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Favorite()),
-              );
-            },
-            child:  Container(
-            width:MediaQuery.of(context).size.width*0.2,
-         child:Column(
-              children: [
-           SvgPicture.asset('assets/images/favorite.svg',color:widget.index==4? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),  
-                Text("Favorite",style:  TextStyle(color:widget.index==4? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255) ),)
-              ],
-            )
-          ),
-          )
+        //     GestureDetector(
+        //     onTap: (){
+        //         Navigator.push(
+        //         context,
+        //         MaterialPageRoute(builder: (context) => Favorite()),
+        //       );
+        //     },
+        //     child:  Container(
+        //     width:MediaQuery.of(context).size.width*0.2,
+        //  child:Column(
+        //       children: [
+        //    SvgPicture.asset('assets/images/favorite.svg',color:widget.index==4? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),  
+        //         Text("Favorite",style:  TextStyle(color:widget.index==4? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255) ),)
+        //       ],
+        //     )
+        //   ),
+        //   )
         
          
 

@@ -13,5 +13,5 @@ final Map<String, WidgetBuilder> routes = {
   '/discovery': (context) => Discovery(),
   '/business': (context) => Business(),
   '/almanac': (context) => Almanac(),
-  '/favorite': (context) => Favorite()
+  // '/favorite': (context) => Favorite()
 };
