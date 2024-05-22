@@ -1,5 +1,6 @@
 // import 'dart:js';
 
+import 'package:chamber_of_commerce/pages/user/Almanac.dart';
 import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/CustomBottomNavBar.dart';
@@ -39,7 +40,7 @@ class _CompanyState extends State<Company> {
           onPressed:()=>{
            Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => Home()),
+              MaterialPageRoute(builder: (context) => Almanac()),
             ),
             }
           ),

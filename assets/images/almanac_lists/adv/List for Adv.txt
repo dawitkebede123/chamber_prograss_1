@@ -1,0 +1,31 @@
+LISTS 
+
+BANK
+Awash Bank S.C.____________Done!
+Addis Int. Bank S.CS.C.____________Done!
+Berhan Bank S.C.____________Done!
+Commercial Bank of Ethiopia____________Done!
+Dashen Bank S.C.____________Done!
+Development Bank of Ethiopia____________Done!
+Enat Bank S.C.____________Done!
+Hibret Bank S.C.____________Done!
+Siket Bank S.C____________Done!
+Wegagen Bank S.C.____________Done!
+
+
+INSURANCE
+Abay Insurance S.C.____________Done!
+Africa Insurance Company S.C.____________Done!
+Awash Insurance S.C.____________Done!
+Berhan Insurance S.C.____________Done!
+Ethio-Life & General Insurance S.C.____________Done!
+
+
+Microfinance Institution
+Elsabi Microfinance Institution S.C.____________Done!
+Amigos Saving and Credit Cooporate S.C____________Done!
+
+
+Fin Tech
+Kacha Digital Financial Services SC____________Done!
+Ethswitch____________Done!

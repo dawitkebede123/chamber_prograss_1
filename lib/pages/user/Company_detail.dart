@@ -23,7 +23,7 @@ class CompanyState extends State<CompanyDetail> {
   @override
   Widget build(BuildContext context) {
     // final accountNumber = widget.data['Account Number'];
-    final name = widget.data['Company Name'];
+    final name = widget.data['Campany Name'];
     final tel = widget.data['Tel'];
     final fax = widget.data['Fax'];
     final email = widget.data['E-mail'];
@@ -112,7 +112,7 @@ class CompanyState extends State<CompanyDetail> {
            SizedBox(height: 5,),
           Row(
             children: [
-               SvgPicture.asset('assets/images/fax_icon.svg'),
+               SvgPicture.asset('assets/images/phone_icon.svg'),
               SizedBox(width: 10,),
               Text(fax),
             ],

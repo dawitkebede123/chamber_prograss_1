@@ -1,3 +1,4 @@
+import 'package:chamber_of_commerce/pages/user/AlmanacListing.dart';
 import 'package:chamber_of_commerce/pages/user/Home.dart';
 import 'package:chamber_of_commerce/pages/admin/adminHome.dart';
 import 'package:chamber_of_commerce/widgets/BottomNavBar.dart';
@@ -5,34 +6,68 @@ import 'package:chamber_of_commerce/widgets/CustomBottomNavBar.dart';
 import 'package:chamber_of_commerce/widgets/GridScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class Almanac extends StatelessWidget {
+  final slideImages = [
+      "assets/images/almanac_lists/adv/1.jpg",
+      "assets/images/almanac_lists/adv/2.jpg",
+      "assets/images/almanac_lists/adv/3.jpg",
+       "assets/images/almanac_lists/adv/4.jpg",
+        "assets/images/almanac_lists/adv/5.jpg",
+         "assets/images/almanac_lists/adv/6.jpg",
+          "assets/images/almanac_lists/adv/7.jpg",
+           "assets/images/almanac_lists/adv/8.jpg",
+            "assets/images/almanac_lists/adv/9.jpg",
+             "assets/images/almanac_lists/adv/10.jpg",
+              "assets/images/almanac_lists/adv/11.jpg",
+             "assets/images/almanac_lists/adv/12.jpg",
+              "assets/images/almanac_lists/adv/13.jpg",
+               "assets/images/almanac_lists/adv/14.jpg",
+                "assets/images/almanac_lists/adv/15.jpg",
+                 "assets/images/almanac_lists/adv/16.jpg",
+                  "assets/images/almanac_lists/adv/17.jpg",
+                   "assets/images/almanac_lists/adv/18.jpg",
+                    "assets/images/almanac_lists/adv/19.jpg",  
+ "assets/images/almanac_lists/adv/20.jpg",
+  ];
+
+
+
   // const Almanac({super.key});
-   List <Map<String,dynamic>> AlmanacCategory = [
+   List <dynamic> AlmanacCategory = [
     {
       "image":"assets/images/finance.svg",
-     "category_name":"Bank",
+       "index":1,
+       "title":""
     },
     {
        "image":"assets/images/finance.svg",
-     "category_name":"Bank",
+     "index":2,
+       "title":""
     },
     {
        "image":"assets/images/finance.svg",
-     "category_name":"Bank",
+     "index":3,
+       "title":""
     },
     {
        "image":"assets/images/finance.svg",
-     "category_name":"Bank",
+     "index":4,
+       "title":""
     },
     {
        "image":"assets/images/finance.svg",
-     "category_name":"Bank",
+     "index":5,
+       "title":""
+
     },{
        "image":"assets/images/finance.svg",
-     "category_name":"Bank",
-    }
-  ];
+     "index":6,
+            "title":""
+    }];
+  
   @override
   Widget build(BuildContext context) {
      const _items = [
@@ -92,7 +127,7 @@ class Almanac extends StatelessWidget {
         centerTitle: true,
       ),
     
-      body: Column(
+      body: ListView(
         children: [
           Container(
              width: MediaQuery.of(context).size.width * 0.9,
@@ -102,7 +137,16 @@ class Almanac extends StatelessWidget {
               color: const Color.fromARGB(255,229,234,232),
 
       borderRadius:BorderRadius.circular(20),),
-        child:SvgPicture.asset('assets/images/Adv_slider.svg'),
+      child:Column( 
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+           CarouselSlider.builder(itemCount: slideImages.length, itemBuilder:(context,index,realIndex){
+            final urlImage = slideImages[index];
+            return buildImage(urlImage,index);
+           }, options: CarouselOptions(height: 100,autoPlay: true))
+
+      ],)
+        // child:SvgPicture.asset('assets/images/Adv_slider.svg'),
           ),
         SizedBox(height: 20,),
           Container(
@@ -134,9 +178,135 @@ class Almanac extends StatelessWidget {
           ),
           
 
-          const Expanded(child:  
-          Padding(padding: EdgeInsets.all(10),
-         child: GridScreen(items: _items),),)
+           Expanded(
+             child:  Padding(padding: EdgeInsets.only( left: 8,top: 5),
+                     child:Container(
+                       width: MediaQuery.of(context).size.width * 1,
+            child:  Column(
+              children: [
+                Row(
+                  children: [
+                       GestureDetector(
+                                        
+                                   onTap: (){
+                                    Navigator.push(
+                                       context,
+                                       MaterialPageRoute(builder: (context) =>  AlmanacListing(index: 1,title: "Bank",)),
+                                     );},
+                                 
+                               // child: Column(children: [
+                                 // SizedBox(height: 50,),
+                               child:  Container(
+                                child: Padding(padding: EdgeInsets.all(5),
+                                   child: SvgPicture.asset("assets/images/almanac_lists/bank.svg",width: MediaQuery.of(context).size.width * 0.28,),
+                                )
+                               ) 
+                       
+                               // ],)
+                                    ,),
+                                     GestureDetector(
+                                        
+                                   onTap: (){
+                                    Navigator.push(
+                                       context,
+                                       MaterialPageRoute(builder: (context) =>  AlmanacListing(index: 2,title: "Insurance",)),
+                                     );},
+                                 
+                               // child: Column(children: [
+                                 // SizedBox(height: 50,),
+                               child:  Container(
+                                child: Padding(padding: EdgeInsets.all(5),
+                                   child: SvgPicture.asset("assets/images/almanac_lists/Insurance.svg",width: MediaQuery.of(context).size.width * 0.28,),
+                                )
+                               ) 
+                       
+                               // ],)
+                                    ,),
+                                     GestureDetector(
+                                        
+                                   onTap: (){
+                                    Navigator.push(
+                                       context,
+                                       MaterialPageRoute(builder: (context) =>  AlmanacListing(index: 3,title: "Mircro Finance",)),
+                                     );},
+                                 
+                               // child: Column(children: [
+                                 // SizedBox(height: 50,),
+                               child:  Container(
+                                child: Padding(padding: EdgeInsets.all(5),
+                                   child: SvgPicture.asset("assets/images/almanac_lists/micro_finance.svg",width: MediaQuery.of(context).size.width * 0.28,),
+                                )
+                               ) 
+                       
+                               // ],)
+                                    ,),
+                  ],
+                ),
+                 Row(
+                  children: [
+                       GestureDetector(
+                                        
+                                   onTap: (){
+                                    Navigator.push(
+                                       context,
+                                       MaterialPageRoute(builder: (context) =>  AlmanacListing(index: 4,title:"Fintech")),
+                                     );},
+                                 
+                               // child: Column(children: [
+                                 // SizedBox(height: 50,),
+                               child:  Container(
+                                child: Padding(padding: EdgeInsets.all(5),
+                                   child: SvgPicture.asset("assets/images/almanac_lists/fintech.svg",width: MediaQuery.of(context).size.width * 0.28,),
+                                )
+                               ) 
+                       
+                               // ],)
+                                    ,),
+                                     GestureDetector(
+                                        
+                                   onTap: (){
+                                    Navigator.push(
+                                       context,
+                                       MaterialPageRoute(builder: (context) =>  AlmanacListing(index: 5,title:"Telecom")),
+                                     );},
+                                 
+                               // child: Column(children: [
+                                 // SizedBox(height: 50,),
+                               child:  Container(
+                                child: Padding(padding: EdgeInsets.all(5),
+                                   child: SvgPicture.asset("assets/images/almanac_lists/telecom.svg",width: MediaQuery.of(context).size.width * 0.28,),
+                                )
+                               ) 
+                       
+                               // ],)
+                                    ,),
+                                     GestureDetector(
+                                        
+                                   onTap: (){
+                                    Navigator.push(
+                                       context,
+                                       MaterialPageRoute(builder: (context) =>  AlmanacListing(index: 6,title:"Capital Goods")),
+                                     );},
+                                 
+                               // child: Column(children: [
+                                 // SizedBox(height: 50,),
+                               child:  Container(
+                                child: Padding(padding: EdgeInsets.all(5),
+                                   child: SvgPicture.asset("assets/images/almanac_lists/capital_goods.svg",width: MediaQuery.of(context).size.width * 0.28,),
+                                )
+                               ) 
+                       
+                               // ],)
+                                    ,),
+                  ],
+                )
+              ],
+            )))
+         // Padding(padding: EdgeInsets.all(10),
+         //child: GridScreen(items: _items),),
+         //
+         
+         )
           
 
 
@@ -148,7 +318,11 @@ class Almanac extends StatelessWidget {
     );
     return scaffold;
   }
-
+Widget buildImage(String urlImage,int index)=>
+          Container(
+                 margin: EdgeInsets.symmetric(horizontal:5),
+                 child:Image.network(urlImage,fit: BoxFit.cover,),
+          );
 //  Widget _buildCard(String item) {
 //     return Container(
 //       height: 126,
