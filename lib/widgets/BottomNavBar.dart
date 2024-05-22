@@ -59,32 +59,32 @@ class _BottomNavState extends State<BottomNav> {
        backgroundColor: Color.fromARGB(255, 0, 114, 63),
          
        ),
-       BottomNavigationBarItem(
-      //  backgroundColor: Color.fromARGB(255, 0, 114, 63),
-        //you have to use svg
-         icon: 
-        //  Container(
-            TextButton(
-            onPressed:  () { 
-              // onTap(1);
-                  Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Discovery()),
-              );
-            },
-            // [on,off]
-                   //  in every icon change the color have to be change
-           //give unique number for each icons
-                   //  if()
-             child:SvgPicture.asset('assets/images/discovery.svg',color:widget.index==1? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
+      //  BottomNavigationBarItem(
+      // //  backgroundColor: Color.fromARGB(255, 0, 114, 63),
+      //   //you have to use svg
+      //    icon: 
+      //   //  Container(
+      //       TextButton(
+      //       onPressed:  () { 
+      //         // onTap(1);
+      //             Navigator.push(
+      //           context,
+      //           MaterialPageRoute(builder: (context) => Discovery()),
+      //         );
+      //       },
+      //       // [on,off]
+      //              //  in every icon change the color have to be change
+      //      //give unique number for each icons
+      //              //  if()
+      //        child:SvgPicture.asset('assets/images/discovery.svg',color:widget.index==1? Color.fromARGB(255,253,184,19):Color.fromARGB(255, 255, 255, 255)),   
             
-           ),
-        //  ),
+      //      ),
+      //   //  ),
          
-         label: 'Discovery',
-       backgroundColor: Color.fromARGB(255, 0, 114, 63),
+      //    label: 'Discovery',
+      //  backgroundColor: Color.fromARGB(255, 0, 114, 63),
          
-       ),
+      //  ),
        BottomNavigationBarItem(
           // icon: Image(image: AssetImage('assets/images/business_small.png')),
            icon: TextButton(

@@ -208,10 +208,10 @@ class _BusinessState extends State<Business> {
            Expanded( 
             // child:margin()
             // ListView.builder(itemBuilder: itemBuilder)
-              // child: GridScreenForBusiness(items:_items)
-            child:  Padding(padding: EdgeInsets.only( left: 8,top: 5),
+            //   child: GridScreenForBusiness(items:_items)
+            // child:  Padding(padding: EdgeInsets.only( left: 8,top: 5),
                      child:Container(
-                       width: MediaQuery.of(context).size.width * 0.8,
+                      //  width: MediaQuery.of(context).size.width * 0.8,
                       // width:MediaQuery.of(context),
 
                        child: 
@@ -484,7 +484,8 @@ class _BusinessState extends State<Business> {
                        
                                    ],)
                                ]),
-                     ),)
+                     ),
+                    //  )
             )
             ,]),
          

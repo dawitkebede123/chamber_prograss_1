@@ -10,7 +10,7 @@ import 'package:chamber_of_commerce/pages/user/Home.dart';
 
 final Map<String, WidgetBuilder> routes = {
   '/home': (context) => Home(),
-  '/discovery': (context) => Discovery(),
+  // '/discovery': (context) => Discovery(),
   '/business': (context) => Business(),
   '/almanac': (context) => Almanac(),
   // '/favorite': (context) => Favorite()

@@ -93,7 +93,7 @@ class _Business_listingState extends State<Business_listing> {
     ),
        
         title:const Text(
-          'Business_listing Directory',
+          'Business Directory',
           style: TextStyle(
            color: Colors.black,
            fontWeight: FontWeight.bold,
