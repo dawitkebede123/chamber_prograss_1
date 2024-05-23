@@ -31,6 +31,95 @@ class AlmanacListing extends StatelessWidget {
    
 
   ];
+  List <dynamic> bank = [
+    {
+   "logo":"assets/images/almanac_lists/awash.svg",
+   index:1
+  },
+  {
+"logo":"assets/images/almanac_lists/cbe",
+index:2
+  },
+  {
+ "logo":"assets/images/almanac_lists/dashen1.svg",
+ index:3
+  },
+  {
+"logo":"assets/images/almanac_lists/oromia.svg",
+index:4
+  },
+  {
+"logo":"assets/images/almanac_lists/wegagen.svg",
+index:5
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:6
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:7
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:8
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:9
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:10
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+  },
+ ];
+ List <dynamic> Insurance = [
+{
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+  },
+  {
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+  },
+ ];
+ List <dynamic> micro_finance = [
+{
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+},
+{
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+},
+ ];
+ List <dynamic> fintech = [
+{
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+},
+{
+"logo":"assets/images/almanac_lists/awash.svg",
+index:11
+}
+
+ ];
      var scaffold = Scaffold(
       //  drawer:const BackButton(
       //   //  backgroundColor: Colors.white,
@@ -122,6 +211,7 @@ class AlmanacListing extends StatelessWidget {
                      child:Container(
                        width: MediaQuery.of(context).size.width * 1,
                       //  child: ,
+                      
             child:  Column(
               children: [
                 Row(

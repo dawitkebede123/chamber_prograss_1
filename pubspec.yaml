@@ -128,6 +128,7 @@ flutter:
     - assets/images/almanac_lists/capital_goods.svg
     - assets/images/almanac_lists/telecom.svg
     - assets/images/business_lists/agriculture.svg
+    - assets/images/business_lists/agriculture_.svg
     - assets/images/business_lists/construction.svg
     - assets/images/business_lists/community.svg
     - assets/images/business_lists/electricity.svg

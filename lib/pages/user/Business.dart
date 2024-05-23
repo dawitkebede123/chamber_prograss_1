@@ -211,7 +211,7 @@ class _BusinessState extends State<Business> {
             //   child: GridScreenForBusiness(items:_items)
             // child:  Padding(padding: EdgeInsets.only( left: 8,top: 5),
                      child:Container(
-                      //  width: MediaQuery.of(context).size.width * 0.8,
+                       width: MediaQuery.of(context).size.width * 0.8,
                       // width:MediaQuery.of(context),
 
                        child: 
@@ -235,7 +235,14 @@ class _BusinessState extends State<Business> {
                                  // SizedBox(height: 50,),
                                child:  Container(
                                 child: Padding(padding: EdgeInsets.all(5),
-                                   child: SvgPicture.asset("assets/images/business_lists/agriculture.svg",width: MediaQuery.of(context).size.width * 0.28,),
+                                   child: Column(
+                                     children: [
+                                       SvgPicture.asset("assets/images/business_lists/agriculture_.svg",width: MediaQuery.of(context).size.width * 0.208,),
+                                         SizedBox(height: 10,),
+                                          Text("agriculture")
+                                     
+                                     ],
+                                   ),
                                 )
                                ) 
                        

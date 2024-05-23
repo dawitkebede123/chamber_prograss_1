@@ -51,6 +51,7 @@ class _Business_listingState extends State<Business_listing> {
     // ),
   //  
     //  final data
+    
      final  _items = [
      'assets/images/business_lists/sample/1.svg',
      'assets/images/business_lists/sample/2.svg',
