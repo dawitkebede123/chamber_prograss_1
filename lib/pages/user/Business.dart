@@ -282,13 +282,31 @@ class _BusinessState extends State<Business> {
                                    ),
                                    
                                      Row(children: [
-                       
-                                      SvgPicture.asset("assets/images/business_lists/electricity.svg",width: MediaQuery.of(context).size.width * 0.28,),
-                         GestureDetector(
+                        GestureDetector(
+                                        
                                    onTap: (){
                                     Navigator.push(
                                        context,
                                        MaterialPageRoute(builder: (context) =>  Business_listing(index: 4)),
+                                     );},
+                                 
+                               // child: Column(children: [
+                                 // SizedBox(height: 50,),
+                               child:  Container(
+                                child: Padding(padding: EdgeInsets.all(5),
+                                   child: 
+                                     SvgPicture.asset("assets/images/business_lists/electricity.svg",width: MediaQuery.of(context).size.width * 0.28,),
+
+                                )
+                               ) 
+                       
+                               // ],)
+                                    ,),
+                         GestureDetector(
+                                   onTap: (){
+                                    Navigator.push(
+                                       context,
+                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 5)),
                                      );},
                                  
                                // child: Column(children: [
@@ -305,7 +323,7 @@ class _BusinessState extends State<Business> {
                                    onTap: (){
                                     Navigator.push(
                                        context,
-                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 5)),
+                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 6)),
                                      );},
                                  
                                // child: Column(children: [
@@ -326,7 +344,7 @@ class _BusinessState extends State<Business> {
                                    onTap: (){
                                     Navigator.push(
                                        context,
-                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 6)),
+                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 7)),
                                      );},
                                  
                                // child: Column(children: [
@@ -343,7 +361,7 @@ class _BusinessState extends State<Business> {
                                    onTap: (){
                                     Navigator.push(
                                        context,
-                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 7)),
+                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 8)),
                                      );},
                                  
                                // child: Column(children: [
@@ -360,7 +378,7 @@ class _BusinessState extends State<Business> {
                                    onTap: (){
                                     Navigator.push(
                                        context,
-                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 8)),
+                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 9)),
                                      );},
                                  
                                // child: Column(children: [
@@ -380,7 +398,7 @@ class _BusinessState extends State<Business> {
                                    onTap: (){
                                     Navigator.push(
                                        context,
-                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 9)),
+                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 10)),
                                      );},
                                  
                                // child: Column(children: [
@@ -397,7 +415,7 @@ class _BusinessState extends State<Business> {
                                    onTap: (){
                                     Navigator.push(
                                        context,
-                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 5)),
+                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 11)),
                                      );},
                                  
                                // child: Column(children: [
@@ -414,7 +432,7 @@ class _BusinessState extends State<Business> {
                                    onTap: (){
                                     Navigator.push(
                                        context,
-                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 11)),
+                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 12)),
                                      );},
                                  
                                // child: Column(children: [
@@ -434,7 +452,7 @@ class _BusinessState extends State<Business> {
                                    onTap: (){
                                     Navigator.push(
                                        context,
-                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 12)),
+                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 13)),
                                      );},
                                  
                                // child: Column(children: [
@@ -447,23 +465,23 @@ class _BusinessState extends State<Business> {
                        
                                // ],)
                                     ,),
-                         GestureDetector(
-                                   onTap: (){
-                                    Navigator.push(
-                                       context,
-                                       MaterialPageRoute(builder: (context) =>  Business_listing(index: 13)),
-                                     );},
+                        //  GestureDetector(
+                        //            onTap: (){
+                        //             Navigator.push(
+                        //                context,
+                        //                MaterialPageRoute(builder: (context) =>  Business_listing(index: 13)),
+                        //              );},
                                  
-                               // child: Column(children: [
-                                 // SizedBox(height: 50,),
-                               child: Padding(padding: EdgeInsets.all(5),
-                                   child: 
-                           SvgPicture.asset("assets/images/business_lists/importer.svg",width: MediaQuery.of(context).size.width * 0.28,),
+                        //        // child: Column(children: [
+                        //          // SizedBox(height: 50,),
+                        //        child: Padding(padding: EdgeInsets.all(5),
+                        //            child: 
+                        //    SvgPicture.asset("assets/images/business_lists/importer.svg",width: MediaQuery.of(context).size.width * 0.28,),
                        
-                               ) 
+                        //        ) 
                        
-                               // ],)
-                                    ,),
+                        //        // ],)
+                        //             ,),
                          GestureDetector(
                                    onTap: (){
                                     Navigator.push(

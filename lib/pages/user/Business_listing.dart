@@ -9,6 +9,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 
 class Business_listing extends StatefulWidget {
   final int index;
@@ -123,23 +125,20 @@ class _Business_listingState extends State<Business_listing> {
           //     child: GridScreen(items: _items)
           //     ),
               // SizedBox(width: 20,),
-              Padding(padding: EdgeInsets.all(20),
-              child:Column(children: [
+              Column(children: [
                 StreamBuilder<DatabaseEvent>(builder:  (context, snapshot) {
-           return Container(
-      // Set desired height or adjust with constraints
-      height: 550.0, // Adjust height as needed
-      // color: Color.fromARGB(255, 142, 139, 139), // Optional background color
-      child: _buildContent(snapshot), // Call a separate function
-    );
-        }, stream: _userStream,)
-          //  SvgPicture.asset('assets/images/business_lists/sample/mengesha.svg'),
-          //      SizedBox(height: 20,),
-          //     SvgPicture.asset('assets/images/business_lists/sample/tomoca.svg'),
-          //    SizedBox(height: 20,),
+                         return Container(
+                    // Set desired height or adjust with constraints
+                      height: MediaQuery.of(context).size.height * 0.81, // Adjust height as needed
+                    // color: Color.fromARGB(255, 142, 139, 139), // Optional background color
+                    child: _buildContent(snapshot), // Call a separate function
+                  );
+                      }, stream: _userStream,)
+                        //  SvgPicture.asset('assets/images/business_lists/sample/mengesha.svg'),
+                        //      SizedBox(height: 20,),
+                        //     SvgPicture.asset('assets/images/business_lists/sample/tomoca.svg'),
+                        //    SizedBox(height: 20,),
               ],)
-             
-              )
 
 
         ],
@@ -298,7 +297,14 @@ class _Business_listingState extends State<Business_listing> {
   //   return companyName.startsWith(_searchTerm) ? [element] : [];
   // }).toList();
 
-  return ListView.builder(
+  return filteredBusinesses.isEmpty
+    ? const Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Center(
+          child: Text("No Business Found"),
+        ) ,
+      )
+    :  ListView.builder(
     itemCount: filteredBusinesses.length,
     itemBuilder: (context, index) {
       final businessData = filteredBusinesses[index];
@@ -307,6 +313,8 @@ class _Business_listingState extends State<Business_listing> {
       final tel = businessData['Tel'];
       final fax = businessData["Fax"];
       final website = businessData["Web"];
+      
+    
       // Extract business information based on your data structure
       return Padding(padding: EdgeInsets.all(10),
       child:  Container(
@@ -319,8 +327,8 @@ class _Business_listingState extends State<Business_listing> {
   ),
         // color: const Color.fromARGB(255,229,234,232),
         //  width: MediaQuery.of(context).size.width * 0.8,
-         height: 230,
-        child:  Padding(padding: EdgeInsets.all(5),
+        //  height: 230,
+        child:  Padding(padding: EdgeInsets.all(20),
         child: Column(children: [
           Text(name, style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 16),),
           //  Row(
@@ -349,22 +357,40 @@ class _Business_listingState extends State<Business_listing> {
               
           //   ],
           // ),
+          if(tel !="")
           Row(
             children: [
-               SvgPicture.asset('assets/images/phone_icon.svg'),
-              SizedBox(width: 10,),
-              Text(tel),
+              InkWell( // Wrap the content in an InkWell
+      onTap: () {
+        launch('tel:$tel'); // Launch the phone dialer with the number
+      },
+             child: Row(
+                children: [
+                   SvgPicture.asset('assets/images/phone_icon.svg'),
+                  SizedBox(width: 10,),
+                  Text(tel),
+                ],
+              ),),
             ],
           ),
           SizedBox(height: 5,),
+         
+           if(website !="")
           Row(
+          children: [
+           InkWell( // Wrap the content in an InkWell
+              onTap: () {
+                launch(website); // Launch the URL in a web browser
+      },
+            child:Row(
             children: [
                SvgPicture.asset('assets/images/web_icon.svg'),
               SizedBox(width: 10,),
               Text(website),
             ],
-          ),
+          )),],),
            SizedBox(height: 5,),
+           if(fax !="")
           Row(
             children: [
                SvgPicture.asset('assets/images/fax_icon.svg'),
@@ -373,13 +399,20 @@ class _Business_listingState extends State<Business_listing> {
             ],
           ),
            SizedBox(height: 5,),
+            if(email !="")
           Row(
+  children: [
+    InkWell( // Wrap the content in an InkWell
+      onTap: () {
+        launch('mailto:$email'); // Launch email app with recipient
+      },
+      child: Row(
             children: [
                SvgPicture.asset('assets/images/mail_icon.svg'),
                SizedBox(width: 10,),
               Text(email),
             ],
-          )
+          ),)])
           // const Column(
           //   children: [
               
